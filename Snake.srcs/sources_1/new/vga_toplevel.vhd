@@ -76,7 +76,7 @@ testpattern: vga_test_pattern
                color => color_sig);
 
 vga_hsync <= hsync_sig;
-vga_sync <= vsync_sig;
+vga_vsync <= vsync_sig;
 
 vga_red <= color_sig(11 downto 8) when video_on_sig = '1' else (others => '0');
 vga_green <= color_sig(7 downto 4) when video_on_sig = '1' else (others => '0');

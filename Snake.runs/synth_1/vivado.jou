@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
-# Vivado v2021.2.1 (64-bit)
-# SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
-# IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
-# Start of session at: Sat Aug 16 14:57:12 2025
-# Process ID: 6996
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sat Aug 16 17:30:28 2025
+# Process ID: 15396
 # Current directory: P:/25summer/engs031/Groups/GoldenGiraffe/Snake/Snake.runs/synth_1
-# Command line: vivado.exe -log vga_sync.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_sync.tcl
-# Log file: P:/25summer/engs031/Groups/GoldenGiraffe/Snake/Snake.runs/synth_1/vga_sync.vds
+# Command line: vivado.exe -log vga_toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_toplevel.tcl
+# Log file: P:/25summer/engs031/Groups/GoldenGiraffe/Snake/Snake.runs/synth_1/vga_toplevel.vds
 # Journal file: P:/25summer/engs031/Groups/GoldenGiraffe/Snake/Snake.runs/synth_1\vivado.jou
-# Running On: c011-06, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 20, Host memory: 34031 MB
+# Running On: c011-04, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 20, Host memory: 34031 MB
 #-----------------------------------------------------------
-source vga_sync.tcl -notrace
+source vga_toplevel.tcl -notrace
