@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Snake.srcs/sources_1/new/pixel_generation.vhd" \
+"../../../../Snake.srcs/sources_1/new/vga_sync.vhd" \
+"../../../../Snake.srcs/sources_1/new/vga_test_pattern_12bit.vhd" \
+"../../../../Snake.srcs/sources_1/new/testpat_toplevel.vhd" \
+"../../../../Snake.srcs/sources_1/new/pixelgen_toplevel.vhd" \
+"../../../../Snake.srcs/sim_1/new/vga_sync_tb.vhd" \
+"../../../../Snake.srcs/sim_1/new/pixel_gen_tb.vhdl" \
+
+# Do not sort compile order
+nosort

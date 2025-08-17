@@ -1,3 +1,11 @@
+----------------------------------------------------------------------------------
+-- Authors: Owen Chen and Mary Haferd
+-- Date: 8/16/2025
+-- Name: vga_sync_tb
+-- Target: Basys 3
+-- Description: testbench for VGA synchronizer
+----------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;

@@ -1,0 +1,4 @@
+Running: xsim.dir/pixel_gen_tb_behav/xsimk.exe -simmode gui -wdb pixel_gen_tb_behav.wdb -simrunnum 0 -socket 63201
+Design successfully loaded
+Design Loading Memory Usage: 8924 KB (Peak: 8924 KB)
+Design Loading CPU Usage: 0 ms

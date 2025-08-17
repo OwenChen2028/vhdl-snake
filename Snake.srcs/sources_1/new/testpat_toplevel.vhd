@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------
 -- Authors: Owen Chen and Mary Haferd
 -- Date: 8/16/2025
--- Name: vga_toplevel
+-- Name: testpat_toplevel
 -- Target: Basys 3
 -- Description: displays test pattern on VGA
 ----------------------------------------------------------------------------------

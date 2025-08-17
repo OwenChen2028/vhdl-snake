@@ -1,9 +1,9 @@
 ----------------------------------------------------------------------------------
 -- Authors: Owen Chen and Mary Haferd
 -- Date: 8/16/2025
--- Name: vga_toplevel
+-- Name: pixel_generation
 -- Target: Basys 3
--- Description: generates RGB based on (x, y) value in grid
+-- Description: generates RGB based on value in grid
 ----------------------------------------------------------------------------------
 
 library IEEE;
@@ -22,19 +22,20 @@ end pixel_generation;
 
 architecture behavioral of pixel_generation is
 
-signal grid_x : unsigned(9 downto 0);
-signal grid_y : unsigned(9 downto 0);
+signal grid_x : unsigned(9 downto 0) := (others => '0');
+signal grid_y : unsigned(9 downto 0) := (others => '0');
 
-signal grid_pos : unsigned(10 downto 0);
+signal unused_x : std_logic_vector(4 downto 0) := (others => '0'); -- deliberately unused
+signal unused_y : std_logic_vector(4 downto 0) := (others => '0'); -- deliberately unused
 
-signal selected : unsigned(7 downto 0);
+signal selected : unsigned(7 downto 0) := (others => '0');
 
 constant RED_CONST : std_logic_vector(11 downto 0) := "111100000000";
 constant GREEN_CONST : std_logic_vector(11 downto 0) := "000011110000";
 constant BLUE_CONST : std_logic_vector(11 downto 0) := "000000001111";
 constant BLACK_CONST : std_logic_vector(11 downto 0) := "000000000000";
 
-signal color : std_logic_vector(11 downto 0);
+signal color : std_logic_vector(11 downto 0) := (others => '0');
 
 begin
 
@@ -42,14 +43,12 @@ scale_xy : process(pixel_x, pixel_y)
 begin
     grid_x <= "00000" & unsigned(pixel_x(9 downto 5));
     grid_y <= "00000" & unsigned(pixel_y(9 downto 5));
+    
+    unused_x <= pixel_x(4 downto 0);
+    unused_y <= pixel_y(4 downto 0);
 end process;
 
-find_pos : process(grid_x, grid_y)
-begin
-    grid_pos <= resize(shift_left(grid_y - 2, 4), 11) + resize((grid_x - 2), 11);
-end process;
-
-select_val : process(grid_x, grid_y, grid_pos, grid)
+select_val : process(grid_x, grid_y, grid)
 begin
     if (grid_x <= to_unsigned(0,10)) or (grid_x >= to_unsigned(19,10)) or
        (grid_y <= to_unsigned(0,10)) or (grid_y >= to_unsigned(14,10)) then
@@ -58,8 +57,8 @@ begin
           (grid_y <= to_unsigned(1,10)) or (grid_y >= to_unsigned(13,10)) then
         selected <= to_unsigned(178, 8); -- border
     else
-        selected <= unsigned( grid ( to_integer(shift_left(grid_pos, 3)) + 7
-                              downto to_integer(shift_left(grid_pos, 3)) ));
+        selected <= unsigned( grid ( to_integer(shift_left(resize(shift_left(grid_y - 2, 4), 11) + resize((grid_x - 2), 11), 3)) + 7
+                              downto to_integer(shift_left(resize(shift_left(grid_y - 2, 4), 11) + resize((grid_x - 2), 11), 3)) ));
     end if;
 end process;
 

@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log snake_toplevel.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source snake_toplevel.tcl -notrace
+EAStep vivado -log pixelgen_toplevel.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source pixelgen_toplevel.tcl -notrace
 
 

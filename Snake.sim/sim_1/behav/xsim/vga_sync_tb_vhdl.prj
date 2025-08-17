@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../Snake.srcs/sources_1/new/vga_sync.vhd" \
-"../../../../Snake.srcs/sim_1/new/vga_sync_tb.vhd" \
-
-# Do not sort compile order
-nosort

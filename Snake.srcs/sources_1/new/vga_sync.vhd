@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------
 -- Authors: Owen Chen and Mary Haferd
 -- Date: 8/16/2025
--- Name: vga_toplevel
+-- Name: vga_sync
 -- Target: Basys 3
 -- Description: synchronizer component for VGA
 ----------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ entity vga_sync is
            pixel_y : out std_logic_vector(9 downto 0);
            video_on : out std_logic;
            hsync : out std_logic;
-           vsync : out std_logic);
+           vsync : out std_logic );
 end vga_sync;
 
 architecture behavioral of vga_sync is
