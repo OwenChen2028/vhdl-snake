@@ -27,7 +27,7 @@ signal grid_y : unsigned(9 downto 0);
 
 signal grid_pos : unsigned(10 downto 0);
 
-signal selected : unsigned (7 downto 0);
+signal selected : unsigned(7 downto 0);
 
 constant RED_CONST : std_logic_vector(11 downto 0) := "111100000000";
 constant GREEN_CONST : std_logic_vector(11 downto 0) := "000011110000";
@@ -40,8 +40,8 @@ begin
 
 grid_scale : process(pixel_x, pixel_y)
 begin
-    grid_x <= "00000" & unsigned( pixel_x(9 downto 5) );
-    grid_y <= "00000" & unsigned( pixel_y(9 downto 5) );
+    grid_x <= "00000" & unsigned(pixel_x(9 downto 5));
+    grid_y <= "00000" & unsigned(pixel_y(9 downto 5));
 end process;
 
 grid_index : process(grid_x, grid_y)
@@ -51,9 +51,11 @@ end process;
 
 grid_select : process(grid_x, grid_y, grid_pos, grid)
 begin
-    if (grid_x <= 0) or (grid_x >= 19) or (grid_y <= 0) or (grid_y >= 14) then
+    if (grid_x <= to_unsigned(0,10)) or (grid_x >= to_unsigned(19,10)) or
+       (grid_y <= to_unsigned(0,10)) or (grid_y >= to_unsigned(14,10)) then
         selected <= to_unsigned(0, 8); -- background
-    elsif (grid_x <= 1) or (grid_x >= 18) or (grid_y <= 1) or (grid_y >= 13) then
+    elsif (grid_x <= to_unsigned(1,10)) or (grid_x >= to_unsigned(18,10)) or
+          (grid_y <= to_unsigned(1,10)) or (grid_y >= to_unsigned(13,10)) then
         selected <= to_unsigned(178, 8); -- border
     else
         selected <= unsigned( grid ( to_integer(shift_left(grid_pos, 3)) + 7
@@ -61,21 +63,20 @@ begin
     end if;
 end process;
 
-
-lookup_color : process(selected)
+lookup_color : process(selected, video_on)
 begin
     if video_on = '0' then
         color <= BLACK_CONST;
     else
         case selected is
-        when to_unsigned(0, 8) => -- background
-            color <= BLACK_CONST;
-        when to_unsigned(177, 8) => -- fruit
-            color <= RED_CONST;
-        when to_unsigned(178, 8) => -- border
-            color <= BLUE_CONST;
-        when others => -- snake
-            color <= GREEN_CONST;
+        when to_unsigned(0, 8) =>
+            color <= BLACK_CONST; -- background
+        when to_unsigned(177, 8) =>
+            color <= RED_CONST; -- fruit
+        when to_unsigned(178, 8) =>
+            color <= BLUE_CONST; -- border
+        when others =>
+            color <= GREEN_CONST; -- snake
         end case;
     end if;
 end process;
