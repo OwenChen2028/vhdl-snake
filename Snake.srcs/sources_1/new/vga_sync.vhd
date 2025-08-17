@@ -1,11 +1,14 @@
+----------------------------------------------------------------------------------
+-- Authors: Owen Chen and Mary Haferd
+-- Date: 8/16/2025
+-- Name: vga_toplevel
+-- Target: Basys 3
+-- Description: synchronizer component for VGA
+----------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity vga_sync is
     port ( pixel_clk : in std_logic;
@@ -42,7 +45,7 @@ constant y_disp : integer := 480; -- under y_disp means on display
 begin
 
 -- increment x_sig
-xUpdate : process(clk)
+x_update : process(clk)
 begin
     if rising_edge(clk) then
         if pixel_clk = '1' then -- enable
@@ -56,7 +59,7 @@ begin
 end process;
 
 -- set h_sig
-hUpdate : process(x_sig)
+h_update : process(x_sig)
 begin
     h_sig <= '0';
     if x_sig > to_unsigned(h_bot, 10) and x_sig <= to_unsigned(h_top, 10) then
@@ -65,7 +68,7 @@ begin
 end process;
 
 -- increment y_sig
-yUpdate : process(clk)
+y_update : process(clk)
 begin
     if rising_edge(clk) then
         if pixel_clk = '1' and x_sig = to_unsigned(x_tc, 10) then -- enable
@@ -79,7 +82,7 @@ begin
 end process;
 
 -- set v_sig
-vUpdate : process(y_sig)
+v_update : process(y_sig)
 begin
     v_sig <= '0';
     if y_sig > to_unsigned(v_bot, 10) and y_sig <= to_unsigned(v_top, 10) then
@@ -88,7 +91,7 @@ begin
 end process;
 
 -- set on_sig
-onUpdate : process(x_sig, y_sig)
+on_update : process(x_sig, y_sig)
 begin
     on_sig <= '0';
     if x_sig < to_unsigned(x_disp, 10) and y_sig < to_unsigned(y_disp, 10) then

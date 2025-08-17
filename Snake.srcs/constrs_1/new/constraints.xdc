@@ -1,3 +1,5 @@
+# CITATION: Referenced https://digilent.com/reference/programmable-logic/basys-3/reference-manual
+
 ##====================================================================
 ## Clock
 ##====================================================================

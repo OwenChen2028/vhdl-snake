@@ -1,11 +1,14 @@
+----------------------------------------------------------------------------------
+-- Authors: Owen Chen and Mary Haferd
+-- Date: 8/16/2025
+-- Name: vga_toplevel
+-- Target: Basys 3
+-- Description: displays test pattern on VGA
+----------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity vga_toplevel is
     port ( clk_ext : in std_logic;
