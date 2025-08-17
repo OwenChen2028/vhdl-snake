@@ -55,6 +55,10 @@ signal red_sig : std_logic_vector(3 downto 0) := (others => '0');
 signal green_sig : std_logic_vector(3 downto 0) := (others => '0'); 
 signal blue_sig : std_logic_vector(3 downto 0) := (others => '0'); 
 
+signal red_reg   : std_logic_vector(3 downto 0) := (others => '0');
+signal green_reg : std_logic_vector(3 downto 0) := (others => '0');
+signal blue_reg  : std_logic_vector(3 downto 0) := (others => '0');
+
 begin
 
  -- generate pulse
@@ -98,11 +102,22 @@ gen_rows : for r in 0 to 10 generate
     end generate;
 end generate;
 
+sync_colors : process(clk_ext)
+begin
+  if rising_edge(clk_ext) then
+    if pixel_clk_sig = '1' then
+      red_reg <= red_sig;
+      green_reg <= green_sig;
+      blue_reg <= blue_sig;
+    end if;
+  end if;
+end process;
+
 vga_hsync <= hsync_sig;
 vga_vsync <= vsync_sig;
 
-vga_red <= red_sig;
-vga_green <= green_sig;
-vga_blue <= blue_sig;
+vga_red <= red_reg;
+vga_green <= green_reg;
+vga_blue <= blue_reg;
 
 end toplevel;

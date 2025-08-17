@@ -26,7 +26,7 @@ signal x_sig : unsigned(9 downto 0) := (others => '0'); -- assign to pixel_x
 signal y_sig : unsigned(9 downto 0) := (others => '0'); -- assign to pixel_y
 
 constant x_tc : integer := 799; -- x_sig resets after x_tc
-constant y_tc : integer := 524; -- y_sig resers after y_rc
+constant y_tc : integer := 524; -- y_sig resets after y_rc
 
 signal h_sig : std_logic := '0'; -- assign to hsync
 signal v_sig : std_logic := '0'; -- assign to vsync
@@ -45,7 +45,7 @@ constant y_disp : integer := 480; -- under y_disp means on display
 begin
 
 -- increment x_sig
-x_update : process(clk)
+update_x : process(clk)
 begin
     if rising_edge(clk) then
         if pixel_clk = '1' then -- enable
@@ -59,7 +59,7 @@ begin
 end process;
 
 -- set h_sig
-h_update : process(x_sig)
+update_h : process(x_sig)
 begin
     h_sig <= '0';
     if x_sig > to_unsigned(h_bot, 10) and x_sig <= to_unsigned(h_top, 10) then
@@ -68,7 +68,7 @@ begin
 end process;
 
 -- increment y_sig
-y_update : process(clk)
+update_y : process(clk)
 begin
     if rising_edge(clk) then
         if pixel_clk = '1' and x_sig = to_unsigned(x_tc, 10) then -- enable
@@ -82,7 +82,7 @@ begin
 end process;
 
 -- set v_sig
-v_update : process(y_sig)
+update_v : process(y_sig)
 begin
     v_sig <= '0';
     if y_sig > to_unsigned(v_bot, 10) and y_sig <= to_unsigned(v_top, 10) then
@@ -91,7 +91,7 @@ begin
 end process;
 
 -- set on_sig
-on_update : process(x_sig, y_sig)
+update_on : process(x_sig, y_sig)
 begin
     on_sig <= '0';
     if x_sig < to_unsigned(x_disp, 10) and y_sig < to_unsigned(y_disp, 10) then
@@ -107,4 +107,4 @@ vsync <= not(v_sig);
 
 video_on <= on_sig;
 
-end Behavioral;
+end behavioral;

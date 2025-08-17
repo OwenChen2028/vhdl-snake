@@ -38,18 +38,18 @@ signal color : std_logic_vector(11 downto 0);
 
 begin
 
-grid_scale : process(pixel_x, pixel_y)
+scale_xy : process(pixel_x, pixel_y)
 begin
     grid_x <= "00000" & unsigned(pixel_x(9 downto 5));
     grid_y <= "00000" & unsigned(pixel_y(9 downto 5));
 end process;
 
-grid_index : process(grid_x, grid_y)
+find_pos : process(grid_x, grid_y)
 begin
     grid_pos <= resize(shift_left(grid_y - 2, 4), 11) + resize((grid_x - 2), 11);
 end process;
 
-grid_select : process(grid_x, grid_y, grid_pos, grid)
+select_val : process(grid_x, grid_y, grid_pos, grid)
 begin
     if (grid_x <= to_unsigned(0,10)) or (grid_x >= to_unsigned(19,10)) or
        (grid_y <= to_unsigned(0,10)) or (grid_y >= to_unsigned(14,10)) then
@@ -63,7 +63,7 @@ begin
     end if;
 end process;
 
-lookup_color : process(selected, video_on)
+lookup_col : process(selected, video_on)
 begin
     if video_on = '0' then
         color <= BLACK_CONST;
