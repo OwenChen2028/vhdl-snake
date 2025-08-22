@@ -15,6 +15,8 @@ entity direction_fsm is
            clk : in std_logic;
            update : in std_logic;
            input : in std_logic_vector(1 downto 0);
+           pause : in std_logic;
+           reset : in std_logic;
            direction : out std_logic_vector(1 downto 0));
 end direction_fsm;
 
@@ -31,11 +33,14 @@ state_update: process(clk)
 begin
     if rising_edge(clk) then   
         if update = '1' then
-            current_state <= next_state;
+            if reset = '1' then
+                current_state <= right; -- start state
+            elsif pause = '0' then
+                current_state <= next_state;
+            end if;
         end if;
     end if;
 end process;
-
 
 next_state_logic: process(current_state, input)
 begin

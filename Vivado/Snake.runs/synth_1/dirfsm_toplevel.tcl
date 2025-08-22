@@ -72,8 +72,9 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 7
-set_param synth.incrementalSynthesisCache C:/Users/f006zqm/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8424-c011-07/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/f006zqm/AppData/Local/Temp/.Xil_f006zqm/Vivado-6920-c011-08/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -100,6 +101,7 @@ read_vhdl -library xil_defaultlib {
   P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_test_pattern_12bit.vhd
   P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd
   P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd
+  P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/test.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -110,8 +112,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_constaints.xdc
-set_property used_in_implementation false [get_files P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_constaints.xdc]
+read_xdc P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/fsm1_constraints.xdc
+set_property used_in_implementation false [get_files P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/fsm1_constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 

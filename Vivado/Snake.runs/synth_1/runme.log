@@ -22,68 +22,70 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17420
+INFO: [Synth 8-7075] Helper process launched with PID 9116
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1246.965 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.777 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'dirfsm_toplevel' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:23]
-INFO: [Synth 8-3491] module 'direction_fsm' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:13' bound to instance 'dirfsm' of component 'direction_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'direction_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:21]
-INFO: [Synth 8-226] default block is never used [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:43]
-INFO: [Synth 8-226] default block is never used [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'direction_fsm' (1#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:21]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'up_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'dirfsm_toplevel' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:25]
+INFO: [Synth 8-3491] module 'direction_fsm' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:13' bound to instance 'dirfsm' of component 'direction_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'direction_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:23]
+INFO: [Synth 8-226] default block is never used [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:48]
+INFO: [Synth 8-226] default block is never used [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'direction_fsm' (1#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:23]
+INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'up_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:88]
 INFO: [Synth 8-638] synthesizing module 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:27]
 INFO: [Synth 8-256] done synthesizing module 'button_interface' (2#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:27]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'down_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:85]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'right_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:91]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'left_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:97]
-INFO: [Synth 8-256] done synthesizing module 'dirfsm_toplevel' (3#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:23]
+INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'down_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:94]
+INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'right_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:100]
+INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'left_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:106]
+INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'pause_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:112]
+INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'reset_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:118]
+INFO: [Synth 8-256] done synthesizing module 'dirfsm_toplevel' (3#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd:25]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1246.965 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.777 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.965 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1246.777 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.965 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1246.777 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1246.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1246.777 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_constaints.xdc]
-Finished Parsing XDC File [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_constaints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_constaints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dirfsm_toplevel_propImpl.xdc].
+Parsing XDC File [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/fsm1_constraints.xdc]
+Finished Parsing XDC File [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/fsm1_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/fsm1_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dirfsm_toplevel_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/dirfsm_toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1266.281 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1275.594 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1266.281 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1275.594 ; gain = 0.000
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'button_interface'
 ---------------------------------------------------------------------------------------------------
@@ -96,7 +98,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'button_interface'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -104,19 +106,19 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   26 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 6     
 +---Registers : 
 	               26 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
-	                2 Bit    Registers := 6     
-	                1 Bit    Registers := 5     
+	                8 Bit    Registers := 6     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 7     
 +---Muxes : 
 	   2 Input   26 Bit        Muxes := 1     
-	   4 Input    2 Bit        Muxes := 5     
-	   2 Input    2 Bit        Muxes := 15    
-	   2 Input    1 Bit        Muxes := 21    
+	   4 Input    2 Bit        Muxes := 7     
+	   2 Input    2 Bit        Muxes := 23    
+	   2 Input    1 Bit        Muxes := 25    
 	   6 Input    1 Bit        Muxes := 1     
-	   4 Input    1 Bit        Muxes := 8     
+	   4 Input    1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -134,25 +136,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -170,37 +172,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -218,37 +220,37 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |     7|
-|3     |LUT1   |     9|
-|4     |LUT2   |     8|
-|5     |LUT3   |    11|
-|6     |LUT4   |    21|
-|7     |LUT5   |    15|
-|8     |LUT6   |    15|
-|9     |FDRE   |    79|
-|10    |IBUF   |     5|
+|3     |LUT1   |    13|
+|4     |LUT2   |    12|
+|5     |LUT3   |    14|
+|6     |LUT4   |    30|
+|7     |LUT5   |    18|
+|8     |LUT6   |    23|
+|9     |FDRE   |   103|
+|10    |IBUF   |     7|
 |11    |OBUF   |     3|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1275.594 ; gain = 28.816
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1266.281 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1266.281 ; gain = 19.316
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1275.594 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1275.594 ; gain = 28.816
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1266.281 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1275.594 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1266.281 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1275.594 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 4105e89e
+Synth Design complete, checksum: e6dd16bc
 INFO: [Common 17-83] Releasing license: Synthesis
-34 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 1266.281 ; gain = 19.316
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1275.594 ; gain = 28.816
 INFO: [Common 17-1381] The checkpoint 'P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.runs/synth_1/dirfsm_toplevel.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file dirfsm_toplevel_utilization_synth.rpt -pb dirfsm_toplevel_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Aug 17 21:03:30 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 21 20:12:23 2025...

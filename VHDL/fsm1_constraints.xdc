@@ -24,6 +24,12 @@ set_property IOSTANDARD LVCMOS33 [get_ports right_button]
 set_property PACKAGE_PIN U17 [get_ports down_button]
 set_property IOSTANDARD LVCMOS33 [get_ports down_button]
 
+set_property PACKAGE_PIN V17 [get_ports {pause_switch}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {pause_switch}]
+
+set_property PACKAGE_PIN V16 [get_ports {reset_switch}]
+set_property IOSTANDARD LVCMOS33 [get_ports {reset_switch}]
+
 ##====================================================================
 ## Outputs
 ##====================================================================

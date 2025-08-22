@@ -16,6 +16,8 @@ entity dirfsm_toplevel is
            down_button : in std_logic;
            right_button : in std_logic;
            left_button : in std_logic;
+           pause_switch : in std_logic;
+           reset_switch : in std_logic;
            direction : out std_logic_vector(1 downto 0);
            update_out : out std_logic );
 end dirfsm_toplevel;
@@ -27,7 +29,9 @@ component direction_fsm is
            clk : in std_logic;
            update : in std_logic;
            input : in std_logic_vector(1 downto 0);
-           direction : out std_logic_vector(1 downto 0));
+           pause : in std_logic;
+           reset : in std_logic;
+           direction : out std_logic_vector(1 downto 0) );
 end component;
 
 component button_interface is
@@ -49,6 +53,9 @@ signal up_db_sig : std_logic := '0';
 signal down_db_sig : std_logic := '0';
 signal right_db_sig : std_logic := '0';
 signal left_db_sig : std_logic := '0';
+
+signal pause_db_sig : std_logic := '0';
+signal reset_db_sig : std_logic := '0';
 
 begin
 
@@ -74,7 +81,9 @@ dirfsm: direction_fsm
     port map ( clk => clk_ext,
                update => update_sig,
                input => input_sig,
-               direction => direction_sig);
+               pause => pause_db_sig,
+               reset => reset_db_sig,
+               direction => direction_sig );
 
 up_btn: button_interface
     port map ( clk_port => clk_ext,
@@ -99,18 +108,34 @@ left_btn: button_interface
                button_port => left_button,
                button_db_port => left_db_sig,
                button_mp_port => open );
+               
+pause_btn: button_interface
+    port map ( clk_port => clk_ext,
+               button_port => pause_switch,
+               button_db_port => pause_db_sig,
+               button_mp_port => open );
+               
+reset_btn: button_interface
+    port map ( clk_port => clk_ext,
+               button_port => reset_switch,
+               button_db_port => reset_db_sig,
+               button_mp_port => open );
 
 deode_input : process(clk_ext)
 begin
     if rising_edge(clk_ext) then
-        if up_db_sig = '1' then
-            input_sig <= "00";
-        elsif down_db_sig = '1' then
-            input_sig <= "01";
-        elsif right_db_sig = '1' then
-            input_sig <= "10";
-        elsif left_db_sig = '1' then
-            input_sig <= "11";
+        if reset_db_sig = '1' then
+            input_sig <= "10"; -- initial direction
+        else
+            if up_db_sig = '1' then
+                input_sig <= "00";
+            elsif down_db_sig = '1' then
+                input_sig <= "01";
+            elsif right_db_sig = '1' then
+                input_sig <= "10";
+            elsif left_db_sig = '1' then
+                input_sig <= "11";
+            end if;
         end if;
     end if;
 end process;

@@ -7,6 +7,8 @@ vhdl xil_defaultlib  \
 "../../../../../VHDL/vga_sync.vhd" \
 "../../../../../VHDL/vga_test_pattern_12bit.vhd" \
 "../../../../../VHDL/direction_fsm.vhd" \
+"../../../../../VHDL/dirfsm_toplevel.vhd" \
+"../../../../../VHDL/test.vhd" \
 "../../../../../VHDL/vga_sync_tb.vhd" \
 "../../../../../VHDL/direction_fsm_tb.vhd" \
 "../../../../../VHDL/pixelgen_tb.vhd" \

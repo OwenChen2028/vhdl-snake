@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Sun Aug 17 21:04:07 2025
-| Host         : c011-07 running 64-bit major release  (build 9200)
+| Date         : Thu Aug 21 20:13:00 2025
+| Host         : c011-08 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file dirfsm_toplevel_methodology_drc_routed.rpt -pb dirfsm_toplevel_methodology_drc_routed.pb -rpx dirfsm_toplevel_methodology_drc_routed.rpx
 | Design       : dirfsm_toplevel
 | Device       : xc7a35tcpg236-1
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 7
+             Violations found: 9
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 7          |
+| TIMING-18 | Warning  | Missing input or output delay | 9          |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -44,25 +44,35 @@ Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An input delay is missing on right_button relative to clock(s) sys_clk_pin
+An input delay is missing on pause_switch relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An input delay is missing on up_button relative to clock(s) sys_clk_pin
+An input delay is missing on reset_switch relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on direction[0] relative to clock(s) sys_clk_pin
+An input delay is missing on right_button relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on direction[1] relative to clock(s) sys_clk_pin
+An input delay is missing on up_button relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on direction[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on direction[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#9 Warning
 Missing input or output delay  
 An output delay is missing on update_out relative to clock(s) sys_clk_pin
 Related violations: <none>

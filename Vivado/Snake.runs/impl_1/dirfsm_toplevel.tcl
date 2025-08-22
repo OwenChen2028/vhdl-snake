@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -126,7 +127,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 7
-  set_param synth.incrementalSynthesisCache C:/Users/f006zqm/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8424-c011-07/incrSyn
+  set_param synth.incrementalSynthesisCache C:/Users/f006zqm/AppData/Local/Temp/.Xil_f006zqm/Vivado-6920-c011-08/incrSyn
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
@@ -143,7 +144,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.runs/synth_1/dirfsm_toplevel.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_constaints.xdc
+  read_xdc P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/fsm1_constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

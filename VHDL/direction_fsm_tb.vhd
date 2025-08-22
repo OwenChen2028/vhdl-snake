@@ -19,6 +19,8 @@ component direction_fsm is
     port ( clk : in std_logic;
            update : in std_logic;
            input : in std_logic_vector(1 downto 0);
+           pause : in std_logic;
+           reset : in std_logic;
            direction : out std_logic_vector(1 downto 0));
 end component;
 
@@ -33,12 +35,17 @@ constant counter_tc : integer := 50;
 signal input_sig : std_logic_vector(1 downto 0) := "10";
 signal direction_sig : std_logic_vector(1 downto 0) := "10";
 
+signal pause_sig : std_logic := '0';
+signal reset_sig : std_logic := '0';
+
 begin
 
 uut: direction_fsm
     port map ( clk => clk_sig,
                update => update_sig,
                input => input_sig,
+               pause => pause_sig,
+               reset => reset_sig,
                direction => direction_sig);
 
 clkgen_proc : process
@@ -114,15 +121,26 @@ begin
     input_sig <= "01";
     wait for 50 * clk_period; -- still expect up
     
+    --test input left when paused in up
+    pause_sig <= '1';
+    input_sig <= "11";
+    wait for 50 * clk_period; -- still expect up
+    
+    --test reset
+    pause_sig <= '0';
+    reset_sig <= '1';
+    wait for 50 * clk_period; -- expect right
+    
+    reset_sig <= '0';
     wait for 10 * clk_period;
     
-    --move left in between update pulses
-    input_sig <= "11";
-    wait for 10 * clk_period; -- still expect up
+    --move up in between update pulses
+    input_sig <= "00";
+    wait for 10 * clk_period; -- still expect right
     
-     --move right in between update pulses
-    input_sig <= "10";
-    wait for 10 * clk_period; -- still expect up
+     --move down in between update pulses
+    input_sig <= "01";
+    wait for 10 * clk_period; -- still expect right
     
     input_sig <= "00";
     wait;
