@@ -2,3 +2,6 @@ Running: xsim.dir/direction_fsm_tb_behav/xsimk.exe -simmode gui -wdb direction_f
 Design successfully loaded
 Design Loading Memory Usage: 9240 KB (Peak: 9240 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 9904 KB (Peak: 9904 KB)
+Simulation CPU Usage: 15 ms

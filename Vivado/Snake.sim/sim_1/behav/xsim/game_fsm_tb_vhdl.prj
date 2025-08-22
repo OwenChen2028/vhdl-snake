@@ -9,9 +9,11 @@ vhdl xil_defaultlib  \
 "../../../../../VHDL/direction_fsm.vhd" \
 "../../../../../VHDL/dirfsm_toplevel.vhd" \
 "../../../../../VHDL/test.vhd" \
+"../../../../../VHDL/game_fsm.vhd" \
 "../../../../../VHDL/vga_sync_tb.vhd" \
 "../../../../../VHDL/direction_fsm_tb.vhd" \
 "../../../../../VHDL/pixelgen_tb.vhd" \
+"../../../../../VHDL/game_fsm_tb.vhd" \
 
 # Do not sort compile order
 nosort

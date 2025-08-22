@@ -5,6 +5,8 @@ Oct 19 2021
 P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd,1755819435,vhdl,,,,direction_fsm,,,,,,,,
 P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm_tb.vhd,1755825691,vhdl,,,,direction_fsm_tb,,,,,,,,
 P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd,1755821444,vhdl,,,,dirfsm_toplevel,,,,,,,,
+P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/game_fsm.vhd,1755828819,vhdl,,,,game_fsm,,,,,,,,
+P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/game_fsm_tb.vhd,1755830060,vhdl,,,,game_fsm_tb,,,,,,,,
 P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd,1755461365,vhdl,,,,button_interface,,,,,,,,
 P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd,1755448825,vhdl,,,,pixel_generation,,,,,,,,
 P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixelgen_tb.vhd,1755466395,vhdl,,,,pixelgen_tb,,,,,,,,
