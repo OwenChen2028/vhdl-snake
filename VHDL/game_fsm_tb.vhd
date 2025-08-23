@@ -23,7 +23,7 @@ component game_fsm is
 		   crash : in std_logic;
            pause_db : in std_logic;
 		   reset_db : in std_logic;
-           reset_grid : out std_logic;
+           reset_sync : out std_logic;
 		   move : out std_logic;
 		   done : out std_logic );
 end component;
@@ -43,7 +43,7 @@ signal crash_sig : std_logic := '0';
 signal pause_db_sig : std_logic := '0';
 signal reset_db_sig : std_logic := '0';
 
-signal reset_grid_sig : std_logic := '0';
+signal reset_sync_sig : std_logic := '0';
 signal move_sig : std_logic := '0';
 signal done_sig : std_logic := '0';
 
@@ -57,7 +57,7 @@ uut: game_fsm
                crash => crash_sig,
                pause_db => pause_db_sig,
                reset_db => reset_db_sig,
-               reset_grid => reset_grid_sig,
+               reset_sync => reset_sync_sig,
                move => move_sig,
                done => done_sig );
 
@@ -116,7 +116,7 @@ begin
     
     -- test reset
     reset_db_sig <= '1';
-    wait for 50 * clk_period; -- expect reset grid
+    wait for 50 * clk_period; -- expect reset sync
     reset_db_sig <= '0';
     
     wait for 50 * clk_period;
@@ -131,7 +131,7 @@ begin
     
     -- test reset again
     reset_db_sig <= '1';
-    wait for 50 * clk_period; -- expect reset grid
+    wait for 50 * clk_period; -- expect reset sync
     reset_db_sig <= '0';
     
     wait for 50 * clk_period;

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log dirfsm_toplevel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dirfsm_toplevel.tcl
+EAStep vivado -log randomizer_toplevel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source randomizer_toplevel.tcl

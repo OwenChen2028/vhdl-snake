@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1755821515">
-  <File Type="ROUTE-PWR" Name="dirfsm_toplevel_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="dirfsm_toplevel.tcl"/>
-  <File Type="BITSTR-MMI" Name="dirfsm_toplevel.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="dirfsm_toplevel_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="dirfsm_toplevel_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="dirfsm_toplevel_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="dirfsm_toplevel_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="dirfsm_toplevel_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="dirfsm_toplevel_opt.dcp"/>
-  <File Type="OPT-DRC" Name="dirfsm_toplevel_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="dirfsm_toplevel.hwdef"/>
-  <File Type="PWROPT-DCP" Name="dirfsm_toplevel_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="dirfsm_toplevel_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="dirfsm_toplevel_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="dirfsm_toplevel_placed.dcp"/>
-  <File Type="PLACE-IO" Name="dirfsm_toplevel_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="dirfsm_toplevel_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="dirfsm_toplevel_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="dirfsm_toplevel_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="dirfsm_toplevel_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="dirfsm_toplevel_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="dirfsm_toplevel_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="dirfsm_toplevel.bin"/>
-  <File Type="PLACE-TIMING" Name="dirfsm_toplevel_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="dirfsm_toplevel_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="dirfsm_toplevel.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="dirfsm_toplevel_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="dirfsm_toplevel_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="dirfsm_toplevel_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="dirfsm_toplevel.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="dirfsm_toplevel_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="dirfsm_toplevel_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="dirfsm_toplevel_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="dirfsm_toplevel_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="dirfsm_toplevel_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="dirfsm_toplevel_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="dirfsm_toplevel_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="dirfsm_toplevel_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dirfsm_toplevel_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dirfsm_toplevel_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="dirfsm_toplevel_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="dirfsm_toplevel_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="dirfsm_toplevel_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="dirfsm_toplevel_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="dirfsm_toplevel_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="dirfsm_toplevel_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="dirfsm_toplevel_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="dirfsm_toplevel_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="dirfsm_toplevel_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="dirfsm_toplevel_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="dirfsm_toplevel_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="dirfsm_toplevel_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="dirfsm_toplevel_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="dirfsm_toplevel_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="dirfsm_toplevel_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="dirfsm_toplevel_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="dirfsm_toplevel_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="dirfsm_toplevel.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="dirfsm_toplevel_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="dirfsm_toplevel_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="dirfsm_toplevel.nky"/>
-  <File Type="BITSTR-BMM" Name="dirfsm_toplevel_bd.bmm"/>
-  <File Type="PDI-FILE" Name="dirfsm_toplevel.pdi"/>
-  <File Type="RCFI_FILE" Name="dirfsm_toplevel.rcfi"/>
-  <File Type="CFI_FILE" Name="dirfsm_toplevel.cfi"/>
-  <File Type="RNPI_FILE" Name="dirfsm_toplevel.rnpi"/>
-  <File Type="NPI_FILE" Name="dirfsm_toplevel.npi"/>
-  <File Type="RBD_FILE" Name="dirfsm_toplevel.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1755975100">
+  <File Type="ROUTE-PWR" Name="randomizer_toplevel_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="randomizer_toplevel.tcl"/>
+  <File Type="BITSTR-MMI" Name="randomizer_toplevel.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="randomizer_toplevel_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="randomizer_toplevel_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="randomizer_toplevel_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="randomizer_toplevel_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="randomizer_toplevel_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="randomizer_toplevel_opt.dcp"/>
+  <File Type="OPT-DRC" Name="randomizer_toplevel_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="randomizer_toplevel.hwdef"/>
+  <File Type="PWROPT-DCP" Name="randomizer_toplevel_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="randomizer_toplevel_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="randomizer_toplevel_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="randomizer_toplevel_placed.dcp"/>
+  <File Type="PLACE-IO" Name="randomizer_toplevel_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="randomizer_toplevel_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="randomizer_toplevel_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="randomizer_toplevel_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="randomizer_toplevel_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="randomizer_toplevel_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="randomizer_toplevel_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="randomizer_toplevel.bin"/>
+  <File Type="PLACE-TIMING" Name="randomizer_toplevel_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="randomizer_toplevel_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="randomizer_toplevel.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="randomizer_toplevel_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="randomizer_toplevel_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="randomizer_toplevel_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="randomizer_toplevel.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="randomizer_toplevel_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="randomizer_toplevel_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="randomizer_toplevel_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="randomizer_toplevel_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="randomizer_toplevel_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="randomizer_toplevel_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="randomizer_toplevel_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="randomizer_toplevel_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="randomizer_toplevel_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="randomizer_toplevel_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="randomizer_toplevel_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="randomizer_toplevel_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="randomizer_toplevel_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="randomizer_toplevel_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="randomizer_toplevel_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="randomizer_toplevel_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="randomizer_toplevel_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="randomizer_toplevel_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="randomizer_toplevel_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="randomizer_toplevel_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="randomizer_toplevel_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="randomizer_toplevel_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="randomizer_toplevel_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="randomizer_toplevel_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="randomizer_toplevel_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="randomizer_toplevel_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="randomizer_toplevel_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="randomizer_toplevel.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="randomizer_toplevel_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="randomizer_toplevel_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="randomizer_toplevel.nky"/>
+  <File Type="BITSTR-BMM" Name="randomizer_toplevel_bd.bmm"/>
+  <File Type="PDI-FILE" Name="randomizer_toplevel.pdi"/>
+  <File Type="RCFI_FILE" Name="randomizer_toplevel.rcfi"/>
+  <File Type="CFI_FILE" Name="randomizer_toplevel.cfi"/>
+  <File Type="RNPI_FILE" Name="randomizer_toplevel.rnpi"/>
+  <File Type="NPI_FILE" Name="randomizer_toplevel.npi"/>
+  <File Type="RBD_FILE" Name="randomizer_toplevel.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="dirfsm_toplevel.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="dirfsm_toplevel.sysdef"/>
-  <File Type="BG-BGN" Name="dirfsm_toplevel.bgn"/>
-  <File Type="BG-DRC" Name="dirfsm_toplevel.drc"/>
-  <File Type="RDI-RDI" Name="dirfsm_toplevel.vdi"/>
+  <File Type="BITSTR-LTX" Name="randomizer_toplevel.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="randomizer_toplevel.sysdef"/>
+  <File Type="BG-BGN" Name="randomizer_toplevel.bgn"/>
+  <File Type="BG-DRC" Name="randomizer_toplevel.drc"/>
+  <File Type="RDI-RDI" Name="randomizer_toplevel.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -131,9 +131,33 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../VHDL/game_fsm.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/lfsr_randomizer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/randomizer_toplevel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/lab5_clock_generation.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="dirfsm_toplevel"/>
+      <Option Name="TopModule" Val="randomizer_toplevel"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -146,6 +170,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../VHDL/fsm1_constraints.xdc">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/rand_constraints.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

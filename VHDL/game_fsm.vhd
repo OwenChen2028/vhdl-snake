@@ -18,7 +18,7 @@ entity game_fsm is
 		   crash : in std_logic;
            pause_db : in std_logic;
 		   reset_db : in std_logic;
-           reset_grid : out std_logic;
+           reset_sync : out std_logic;
 		   move : out std_logic;
 		   done : out std_logic );
 end game_fsm;
@@ -94,7 +94,7 @@ begin
 end process;
 
 move <= move_sig;
-reset_grid <= reset_sig;
+reset_sync <= reset_sig;
 done <= done_sig;
 
 end behavioral;
