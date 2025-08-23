@@ -52,7 +52,7 @@ begin
         case current_state is
             when idle =>
                 if pause_db = '1' then
-                    next_state <= pause;
+                    next_state <= pause; -- can go straight to pause
                 elsif pressed = '1' then
                     next_state <= active;
                 end if;
@@ -64,14 +64,14 @@ begin
                 end if;
             when pause =>
                 if pause_db = '0' then 
-                    next_state <= active;
-                end if;
+                    next_state <= active; -- unpausing means active
+                end if; 
             when reset =>
                 if reset_db = '0' then
                     next_state <= idle;
                 end if;
             when others =>
-                null;
+                null; -- not possible to leave game over unless resetting
         end case;
     end if;
 end process;
@@ -89,7 +89,7 @@ begin
        when over => 
             done_sig <= '1';
        when others =>
-            null;
+            null; -- idle and pause have no outputs
     end case;
 end process;
 

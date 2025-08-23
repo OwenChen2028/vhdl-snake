@@ -20,7 +20,7 @@ end lfsr_randomizer;
 
 architecture behavioral of lfsr_randomizer is
 
-constant seed : unsigned(7 downto 0) := "00000001";
+constant seed : unsigned(7 downto 0) := "00000001"; -- initial value of registers
 signal rand_sig : unsigned(7 downto 0) := seed;
 
 begin
@@ -29,10 +29,9 @@ process(clk)
 begin
     if rising_edge(clk) then
         if reset = '1' then
-            rand_sig <= seed;
-        else 
+            rand_sig <= seed; -- set value of register to seed again
+        else -- shift LSB out and feedback in
             rand_sig <= (rand_sig(0) xor rand_sig(2) xor rand_sig(3) xor rand_sig(4)) & rand_sig(7 downto 1); 
-                        
         end if;
     end if;
 end process;

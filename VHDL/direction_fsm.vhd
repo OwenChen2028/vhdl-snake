@@ -23,7 +23,7 @@ end direction_fsm;
 architecture behavioral of direction_fsm is
 
 type state is (up, down, right, left);
-signal current_state, next_state : state := right;
+signal current_state, next_state : state := right; -- start state
 
 signal direction_sig : std_logic_vector(1 downto 0) := "10";
 
@@ -34,8 +34,8 @@ begin
     if rising_edge(clk) then   
         if update = '1' then
             if reset = '1' then
-                current_state <= right; -- start state
-            elsif pause = '0' then
+                current_state <= right; -- go to start state
+            elsif pause = '0' then -- transition when not paused
                 current_state <= next_state;
             end if;
         end if;
@@ -51,25 +51,25 @@ begin
                 next_state <= right;
             elsif input = "11" then
                 next_state <= left;
-            end if;
+            end if; -- going down not allowed
         when right =>
             if input = "01" then
                 next_state <= down;
             elsif input = "00" then
                 next_state <= up;
-            end if;
+            end if; -- going left not allowed
         when down =>
             if input = "11" then 
                 next_state <= left;
             elsif input = "10" then
                 next_state <= right;
-            end if;
+            end if; -- going up not allowed
         when left =>
             if input = "00" then
                 next_state <= up;
             elsif input = "01" then
                 next_state <= down;
-            end if;
+            end if; -- going right not allowed
         when others => null;
     end case;
 end process;
@@ -85,6 +85,6 @@ begin
     end case;
 end process;
 
-direction <= direction_sig;        
+direction <= direction_sig;
 
 end behavioral;
