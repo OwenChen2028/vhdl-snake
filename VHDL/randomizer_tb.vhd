@@ -15,7 +15,7 @@ end randomizer_tb;
 
 architecture testbench of randomizer_tb is
 
-component lfsr_randomizer is
+component randomizer_lfsr is
     port ( clk : in std_logic;
            reset : in std_logic;
            rand : out std_logic_vector(7 downto 0) );
@@ -29,7 +29,7 @@ signal rand_sig : std_logic_vector(7 downto 0) := (others => '0');
 
 begin
 
-uut: lfsr_randomizer
+uut: randomizer_lfsr
     port map ( clk => clk_sig,
                reset => reset_sig,
                rand => rand_sig );

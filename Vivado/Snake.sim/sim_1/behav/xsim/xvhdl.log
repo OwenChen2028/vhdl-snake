@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/lfsr_randomizer.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'lfsr_randomizer'
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/grid_fsm_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'grid_fsm_tb'

@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------
 -- Authors: Owen Chen and Mary Haferd
 -- Date: 8/21/2025
--- Name: game_fsm
+-- Name: game_state_fsm
 -- Target: Basys 3
 -- Description: FSM for tracking game state
 ----------------------------------------------------------------------------------
@@ -10,7 +10,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity game_fsm is
+entity game_state_fsm is
     port ( clk : in std_logic;
            update : in std_logic;
            pressed : in std_logic;
@@ -21,11 +21,11 @@ entity game_fsm is
            reset_sync : out std_logic;
 		   move : out std_logic;
 		   done : out std_logic );
-end game_fsm;
+end game_state_fsm;
 
-architecture behavioral of game_fsm is
+architecture behavioral of game_state_fsm is
 
-type state is (idle, active, pause, reset, over);
+type state is (idle, active, pause, reset, game_over);
 signal current_state, next_state : state := idle;
 
 signal move_sig : std_logic := '0';
@@ -46,7 +46,7 @@ end process;
 next_state_logic: process(current_state, pressed, full, crash, pause_db, reset_db)
 begin
     next_state <= current_state;
-	if reset_db = '1' then -- includes only transition out of over state
+	if reset_db = '1' then -- includes only transition out of game over state
 		next_state <= reset;
 	else
         case current_state is
@@ -58,7 +58,7 @@ begin
                 end if;
             when active =>
                 if crash = '1' or full = '1' then
-                    next_state <= over;
+                    next_state <= game_over;
                 elsif pause_db = '1' then
                     next_state <= pause;
                 end if;
@@ -86,7 +86,7 @@ begin
             move_sig <= '1';
         when reset =>
             reset_sig <= '1'; 
-       when over => 
+       when game_over => 
             done_sig <= '1';
        when others =>
             null; -- idle and pause have no outputs

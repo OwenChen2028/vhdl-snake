@@ -5,17 +5,22 @@ vhdl xil_defaultlib  \
 "../../../../../VHDL/input_conditioning.vhd" \
 "../../../../../VHDL/pixel_generation.vhd" \
 "../../../../../VHDL/vga_sync.vhd" \
-"../../../../../VHDL/vga_test_pattern_12bit.vhd" \
 "../../../../../VHDL/direction_fsm.vhd" \
 "../../../../../VHDL/dirfsm_toplevel.vhd" \
 "../../../../../VHDL/test.vhd" \
-"../../../../../VHDL/game_fsm.vhd" \
-"../../../../../VHDL/lfsr_randomizer.vhd" \
+"../../../../../VHDL/randomizer_toplevel.vhd" \
+"../../../../../VHDL/game_fsm_toplevel.vhd" \
+"../../../../../VHDL/game_state_fsm.vhd" \
+"../../../../../VHDL/grid_helper_fsm.vhd" \
+"../../../../../VHDL/randomizer_lfsr.vhd" \
+"../../../../../VHDL/clock_generation.vhd" \
+"../../../../../VHDL/vga_test_pattern.vhd" \
 "../../../../../VHDL/vga_sync_tb.vhd" \
 "../../../../../VHDL/direction_fsm_tb.vhd" \
 "../../../../../VHDL/pixelgen_tb.vhd" \
 "../../../../../VHDL/game_fsm_tb.vhd" \
 "../../../../../VHDL/randomizer_tb.vhd" \
+"../../../../../VHDL/grid_fsm_tb.vhd" \
 
 # Do not sort compile order
 nosort

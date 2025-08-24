@@ -19,7 +19,7 @@ end randomizer_toplevel;
 
 architecture toplevel of randomizer_toplevel is
 
-component lfsr_randomizer is
+component randomizer_lfsr is
     port ( clk : in std_logic;
            reset : in std_logic;
            rand : out std_logic_vector(7 downto 0) );
@@ -38,7 +38,7 @@ signal clk_sig : std_logic := '0';
 
 begin
 
-lfsr: lfsr_randomizer
+lfsr: randomizer_lfsr
     port map ( clk => clk_sig,
                reset => reset_button,
                rand => rand_out );

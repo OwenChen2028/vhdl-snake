@@ -25,7 +25,7 @@ end game_fsm_toplevel;
 
 architecture toplevel of game_fsm_toplevel is
 
-component game_fsm is
+component game_state_fsm is
     port ( clk : in std_logic;
            update : in std_logic;
            pressed : in std_logic;
@@ -78,7 +78,7 @@ begin
     end if;
 end process;
 
-gamefsm: game_fsm
+gamefsm: game_state_fsm
     port map ( clk => clk_ext,
                update => update_sig,
                pressed => pressed_sig,

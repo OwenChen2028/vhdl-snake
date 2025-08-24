@@ -33,45 +33,47 @@ state_update: process(clk)
 begin
     if rising_edge(clk) then   
         if update = '1' then
-            if reset = '1' then
-                current_state <= right; -- go to start state
-            elsif pause = '0' then -- transition when not paused
-                current_state <= next_state;
-            end if;
+            current_state <= next_state;
         end if;
     end if;
 end process;
 
 next_state_logic: process(current_state, input)
 begin
-    next_state <= current_state;
-    case current_state is
-        when up =>
-            if input = "10" then
-                next_state <= right;
-            elsif input = "11" then
-                next_state <= left;
-            end if; -- going down not allowed
-        when right =>
-            if input = "01" then
-                next_state <= down;
-            elsif input = "00" then
-                next_state <= up;
-            end if; -- going left not allowed
-        when down =>
-            if input = "11" then 
-                next_state <= left;
-            elsif input = "10" then
-                next_state <= right;
-            end if; -- going up not allowed
-        when left =>
-            if input = "00" then
-                next_state <= up;
-            elsif input = "01" then
-                next_state <= down;
-            end if; -- going right not allowed
-        when others => null;
-    end case;
+    if reset = '1' then
+        next_state <= right; -- go to start state
+    elsif pause = '0' then -- transition when not paused
+        next_state <= current_state;
+    else
+        next_state <= current_state;
+        case current_state is
+            when up =>
+                if input = "10" then
+                    next_state <= right;
+                elsif input = "11" then
+                    next_state <= left;
+                end if; -- going down not allowed
+            when right =>
+                if input = "01" then
+                    next_state <= down;
+                elsif input = "00" then
+                    next_state <= up;
+                end if; -- going left not allowed
+            when down =>
+                if input = "11" then 
+                    next_state <= left;
+                elsif input = "10" then
+                    next_state <= right;
+                end if; -- going up not allowed
+            when left =>
+                if input = "00" then
+                    next_state <= up;
+                elsif input = "01" then
+                    next_state <= down;
+                end if; -- going right not allowed
+            when others => null;
+        end case;
+     end if;
 end process;
 
 output_logic : process(current_state)

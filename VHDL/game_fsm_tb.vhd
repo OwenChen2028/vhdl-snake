@@ -15,7 +15,7 @@ end game_fsm_tb;
 
 architecture testbench of game_fsm_tb is
 
-component game_fsm is
+component game_state_fsm is
     port ( clk : in std_logic;
            update : in std_logic;
            pressed : in std_logic;
@@ -49,7 +49,7 @@ signal done_sig : std_logic := '0';
 
 begin
 
-uut: game_fsm
+uut: game_state_fsm
     port map ( clk => clk_sig,
                update => update_sig,
                pressed => pressed_sig,

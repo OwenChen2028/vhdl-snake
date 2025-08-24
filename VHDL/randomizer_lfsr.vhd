@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------
 -- Authors: Owen Chen and Mary Haferd
 -- Date: 8/23/2025
--- Name: lfsr_randomizer
+-- Name: randomizer_lfsr
 -- Target: Basys 3
 -- Description: produces random output
 ----------------------------------------------------------------------------------
@@ -12,13 +12,13 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity lfsr_randomizer is
+entity randomizer_lfsr is
     port ( clk : in std_logic;
            reset : in std_logic;
            rand : out std_logic_vector(7 downto 0) );
-end lfsr_randomizer;
+end randomizer_lfsr;
 
-architecture behavioral of lfsr_randomizer is
+architecture behavioral of randomizer_lfsr is
 
 constant seed : unsigned(7 downto 0) := "00000001"; -- initial value of registers
 signal rand_sig : unsigned(7 downto 0) := seed;
