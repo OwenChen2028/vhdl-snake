@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log randomizer_toplevel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source randomizer_toplevel.tcl
+EAStep vivado -log game_fsm_toplevel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source game_fsm_toplevel.tcl

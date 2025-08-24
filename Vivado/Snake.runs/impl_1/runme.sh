@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log randomizer_toplevel.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source randomizer_toplevel.tcl -notrace
+/bin/touch .write_bitstream.begin.rst
+EAStep vivado -log game_fsm_toplevel.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source game_fsm_toplevel.tcl -notrace
 
 
