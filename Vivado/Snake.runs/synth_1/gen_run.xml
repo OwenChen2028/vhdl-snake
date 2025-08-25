@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1756093986" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_sync.dcp">
-  <File Type="PA-TCL" Name="snake_toplevel.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="snake_toplevel_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="snake_toplevel_reports.tcl"/>
-  <File Type="RDS-RDS" Name="snake_toplevel.vds"/>
-  <File Type="RDS-UTIL" Name="snake_toplevel_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="snake_toplevel_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="snake_toplevel.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="snake_toplevel_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="snake_toplevel_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1756131989" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_sync.dcp">
+  <File Type="PA-TCL" Name="pixelgen_toplevel.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="pixelgen_toplevel_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="pixelgen_toplevel_reports.tcl"/>
+  <File Type="RDS-RDS" Name="pixelgen_toplevel.vds"/>
+  <File Type="RDS-UTIL" Name="pixelgen_toplevel_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="pixelgen_toplevel_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="pixelgen_toplevel.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="pixelgen_toplevel_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="pixelgen_toplevel_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../VHDL/testpat_toplevel.vhd">
@@ -109,14 +109,13 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="snake_toplevel"/>
+      <Option Name="TopModule" Val="pixelgen_toplevel"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
     <File Path="$PPRDIR/../VHDL/vga_constraints.xdc">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
@@ -144,6 +143,7 @@
     </File>
     <File Path="$PPRDIR/../VHDL/snake_constraints.xdc">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>

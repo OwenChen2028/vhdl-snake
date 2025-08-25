@@ -11,7 +11,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity vga_sync is
-    port ( pixel_clk : in std_logic;
+    port ( pixel_en : in std_logic;
            clk : in std_logic;
            pixel_x : out std_logic_vector(9 downto 0);
            pixel_y : out std_logic_vector(9 downto 0);
@@ -48,7 +48,7 @@ begin
 update_x : process(clk)
 begin
     if rising_edge(clk) then
-        if pixel_clk = '1' then -- enable
+        if pixel_en = '1' then -- enable
             if x_sig = to_unsigned(x_tc, 10) then -- reset
                 x_sig <= (others => '0');
             else
@@ -71,7 +71,7 @@ end process;
 update_y : process(clk)
 begin
     if rising_edge(clk) then
-        if pixel_clk = '1' and x_sig = to_unsigned(x_tc, 10) then -- enable
+        if pixel_en = '1' and x_sig = to_unsigned(x_tc, 10) then -- enable
             if y_sig = to_unsigned(y_tc, 10) then -- reset
                 y_sig <= (others => '0');
             else

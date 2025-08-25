@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log snake_toplevel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source snake_toplevel.tcl
+    with args -log pixelgen_toplevel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pixelgen_toplevel.tcl
 
 
 
@@ -9,11 +9,11 @@
   **** IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source snake_toplevel.tcl -notrace
+source pixelgen_toplevel.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.srcs/utils_1/imports/synth_1/vga_sync.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.srcs/utils_1/imports/synth_1/vga_sync.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top snake_toplevel -part xc7a35tcpg236-1
+Command: synth_design -top pixelgen_toplevel -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
@@ -22,45 +22,18 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17036
+INFO: [Synth 8-7075] Helper process launched with PID 1744
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1246.496 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'snake_toplevel' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:28]
-INFO: [Synth 8-3491] module 'vga_sync' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_sync.vhd:13' bound to instance 'sync' of component 'vga_sync' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:187]
+INFO: [Synth 8-638] synthesizing module 'pixelgen_toplevel' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixelgen_toplevel.vhd:22]
+INFO: [Synth 8-3491] module 'vga_sync' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_sync.vhd:13' bound to instance 'sync' of component 'vga_sync' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixelgen_toplevel.vhd:80]
 INFO: [Synth 8-638] synthesizing module 'vga_sync' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_sync.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'vga_sync' (1#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_sync.vhd:23]
-INFO: [Synth 8-3491] module 'pixel_generation' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd:13' bound to instance 'pixelgen' of component 'pixel_generation' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:196]
+INFO: [Synth 8-3491] module 'pixel_generation' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd:13' bound to instance 'pixelgen' of component 'pixel_generation' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixelgen_toplevel.vhd:89]
 INFO: [Synth 8-638] synthesizing module 'pixel_generation' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'pixel_generation' (2#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd:23]
-INFO: [Synth 8-3491] module 'snake_datapath' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_datapath.vhd:13' bound to instance 'datapath' of component 'snake_datapath' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:207]
-INFO: [Synth 8-638] synthesizing module 'snake_datapath' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_datapath.vhd:29]
-INFO: [Synth 8-226] default block is never used [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_datapath.vhd:79]
-WARNING: [Synth 8-5856] 3D RAM grid_2d_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-INFO: [Synth 8-256] done synthesizing module 'snake_datapath' (3#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_datapath.vhd:29]
-INFO: [Synth 8-3491] module 'dp_helper_fsm' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dp_helper_fsm.vhd:13' bound to instance 'helperfsm' of component 'dp_helper_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:222]
-INFO: [Synth 8-638] synthesizing module 'dp_helper_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dp_helper_fsm.vhd:28]
-INFO: [Synth 8-256] done synthesizing module 'dp_helper_fsm' (4#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dp_helper_fsm.vhd:28]
-INFO: [Synth 8-3491] module 'randomizer_lfsr' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/randomizer_lfsr.vhd:15' bound to instance 'randomizer' of component 'randomizer_lfsr' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:236]
-INFO: [Synth 8-638] synthesizing module 'randomizer_lfsr' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/randomizer_lfsr.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'randomizer_lfsr' (5#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/randomizer_lfsr.vhd:21]
-INFO: [Synth 8-3491] module 'direction_fsm' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:13' bound to instance 'dirfsm' of component 'direction_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:243]
-INFO: [Synth 8-638] synthesizing module 'direction_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:23]
-INFO: [Synth 8-226] default block is never used [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:49]
-INFO: [Synth 8-226] default block is never used [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:81]
-INFO: [Synth 8-256] done synthesizing module 'direction_fsm' (6#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd:23]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'up_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:251]
-INFO: [Synth 8-638] synthesizing module 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:27]
-INFO: [Synth 8-256] done synthesizing module 'button_interface' (7#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:27]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'down_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:257]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'right_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:263]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'left_btn' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:269]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'pause_sw' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:275]
-INFO: [Synth 8-3491] module 'button_interface' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/input_conditioning.vhd:16' bound to instance 'reset_sw' of component 'button_interface' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:281]
-INFO: [Synth 8-3491] module 'game_state_fsm' declared at 'P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/game_state_fsm.vhd:13' bound to instance 'gamefsm' of component 'game_state_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:289]
-INFO: [Synth 8-638] synthesizing module 'game_state_fsm' [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/game_state_fsm.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'game_state_fsm' (8#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/game_state_fsm.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'snake_toplevel' (9#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'pixelgen_toplevel' (3#1) [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixelgen_toplevel.vhd:22]
 WARNING: [Synth 8-7129] Port pixel_x[4] in module pixel_generation is either unconnected or has no load
 WARNING: [Synth 8-7129] Port pixel_x[3] in module pixel_generation is either unconnected or has no load
 WARNING: [Synth 8-7129] Port pixel_x[2] in module pixel_generation is either unconnected or has no load
@@ -72,128 +45,73 @@ WARNING: [Synth 8-7129] Port pixel_y[2] in module pixel_generation is either unc
 WARNING: [Synth 8-7129] Port pixel_y[1] in module pixel_generation is either unconnected or has no load
 WARNING: [Synth 8-7129] Port pixel_y[0] in module pixel_generation is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1348.180 ; gain = 101.684
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1348.180 ; gain = 101.684
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1348.180 ; gain = 101.684
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1348.180 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1246.988 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_constraints.xdc]
-Finished Parsing XDC File [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/snake_toplevel_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/snake_toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_constraints.xdc]
+Finished Parsing XDC File [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pixelgen_toplevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pixelgen_toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1348.180 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1246.988 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1348.180 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1246.988 ; gain = 0.000
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1348.180 ; gain = 101.684
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1348.180 ; gain = 101.684
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1348.180 ; gain = 101.684
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'dp_helper_fsm'
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'button_interface'
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'game_state_fsm'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    idle |                              000 |                              000
-               move_head |                              001 |                              001
-                 buffer1 |                              010 |                              010
-             remove_tail |                              011 |                              011
-              place_head |                              100 |                              100
-                 buffer3 |                              101 |                              101
-             place_fruit |                              110 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'dp_helper_fsm'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                     low |                               00 |                               00
-             low_to_high |                               01 |                               01
-                    high |                               10 |                               10
-             high_to_low |                               11 |                               11
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'button_interface'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                   reset |                              000 |                              011
-                    idle |                              001 |                              000
-                  active |                              010 |                              001
-                  iSTATE |                              011 |                              100
-                   pause |                              100 |                              010
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'game_state_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1348.180 ; gain = 101.684
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   26 Bit       Adders := 1     
 	   2 Input   11 Bit       Adders := 1     
 	   2 Input   10 Bit       Adders := 4     
-	   2 Input    8 Bit       Adders := 184   
-	   2 Input    5 Bit       Adders := 2     
-	   2 Input    4 Bit       Adders := 2     
 	   2 Input    2 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
-	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
-	               26 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
-	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 184   
 	                4 Bit    Registers := 3     
-	                2 Bit    Registers := 9     
-	                1 Bit    Registers := 11    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input   26 Bit        Muxes := 1     
 	   5 Input   12 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 1     
-	   2 Input    9 Bit        Muxes := 1     
-	   4 Input    9 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 356   
-	   7 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 3     
-	   4 Input    3 Bit        Muxes := 1     
-	   4 Input    2 Bit        Muxes := 7     
-	   2 Input    2 Bit        Muxes := 23    
-	   2 Input    1 Bit        Muxes := 400   
-	   5 Input    1 Bit        Muxes := 5     
-	   7 Input    1 Bit        Muxes := 1     
-	   6 Input    1 Bit        Muxes := 1     
-	   4 Input    1 Bit        Muxes := 15    
+	   2 Input    8 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -221,25 +139,25 @@ WARNING: [Synth 8-7129] Port pixel_y[2] in module pixel_generation is either unc
 WARNING: [Synth 8-7129] Port pixel_y[1] in module pixel_generation is either unconnected or has no load
 WARNING: [Synth 8-7129] Port pixel_y[0] in module pixel_generation is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:34 . Memory (MB): peak = 1348.180 ; gain = 101.684
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:37 . Memory (MB): peak = 1348.180 ; gain = 101.684
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:44 . Memory (MB): peak = 1350.734 ; gain = 104.238
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:47 . Memory (MB): peak = 1360.820 ; gain = 114.324
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1246.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -257,37 +175,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:49 . Memory (MB): peak = 1373.746 ; gain = 127.250
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1247.105 ; gain = 0.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:49 . Memory (MB): peak = 1373.746 ; gain = 127.250
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1247.105 ; gain = 0.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:49 . Memory (MB): peak = 1373.746 ; gain = 127.250
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1247.105 ; gain = 0.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:49 . Memory (MB): peak = 1373.746 ; gain = 127.250
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1247.105 ; gain = 0.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1373.746 ; gain = 127.250
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1247.105 ; gain = 0.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1373.746 ; gain = 127.250
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1247.105 ; gain = 0.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -304,42 +222,38 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     9|
-|3     |LUT1   |    22|
-|4     |LUT2   |    82|
-|5     |LUT3   |   283|
-|6     |LUT4   |  1035|
-|7     |LUT5   |  1027|
-|8     |LUT6   |  2671|
-|9     |MUXF7  |   631|
-|10    |MUXF8  |   177|
-|11    |FDRE   |  1585|
-|12    |FDSE   |    16|
-|13    |IBUF   |     7|
-|14    |OBUF   |    14|
+|2     |CARRY4 |     2|
+|3     |LUT1   |     2|
+|4     |LUT2   |     6|
+|5     |LUT3   |     8|
+|6     |LUT4   |     9|
+|7     |LUT5   |    19|
+|8     |LUT6   |    24|
+|9     |FDRE   |    31|
+|10    |IBUF   |     1|
+|11    |OBUF   |    14|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1373.746 ; gain = 127.250
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1247.105 ; gain = 0.117
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:48 . Memory (MB): peak = 1373.746 ; gain = 127.250
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1373.746 ; gain = 127.250
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1247.105 ; gain = 0.117
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1247.105 ; gain = 0.117
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1386.801 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 817 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1259.141 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'snake_toplevel' is not ideal for floorplanning, since the cellview 'snake_datapath' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1390.480 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1262.840 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 8928557a
+Synth Design complete, checksum: 66e1e70b
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+27 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:54 . Memory (MB): peak = 1390.480 ; gain = 143.984
-INFO: [Common 17-1381] The checkpoint 'P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.runs/synth_1/snake_toplevel.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file snake_toplevel_utilization_synth.rpt -pb snake_toplevel_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Aug 24 23:54:10 2025...
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1262.840 ; gain = 15.852
+INFO: [Common 17-1381] The checkpoint 'P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.runs/synth_1/pixelgen_toplevel.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pixelgen_toplevel_utilization_synth.rpt -pb pixelgen_toplevel_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 25 10:26:57 2025...

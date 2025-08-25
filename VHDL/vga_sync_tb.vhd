@@ -16,7 +16,7 @@ end vga_sync_tb;
 architecture testbench of vga_sync_tb is
 
 component vga_sync is
-    port ( pixel_clk : in std_logic;
+    port ( pixel_en : in std_logic;
            clk : in std_logic;
            pixel_x : out std_logic_vector(9 downto 0);
            pixel_y : out std_logic_vector(9 downto 0);
@@ -26,7 +26,7 @@ component vga_sync is
 end component;
 
 signal clk_sig : std_logic := '0';
-signal pixel_clk_sig : std_logic := '0';
+signal pixel_en_sig : std_logic := '0';
 
 constant clk_period : time := 10ns; -- 100 MHz
 signal counter : unsigned(1 downto 0) := "00"; -- 1 in 4
@@ -40,7 +40,7 @@ signal vsync_sig : std_logic := '0';
 begin
 
 uut: vga_sync
-    port map ( pixel_clk => pixel_clk_sig,
+    port map ( pixel_en => pixel_en_sig,
                clk => clk_sig,
                pixel_x => pixel_x_sig,
                pixel_y => pixel_y_sig,
@@ -55,12 +55,12 @@ begin
 end process;
 
 -- generate pulse
-pixel_clkgen_proc : process
+pixel_engen_proc : process
 begin
     if (counter + 1) = "11" then
-        pixel_clk_sig <= '1';
+        pixel_en_sig <= '1';
     else
-        pixel_clk_sig <= '0';
+        pixel_en_sig <= '0';
     end if;
     
     counter <= counter + 1;

@@ -22,7 +22,7 @@ end testpat_toplevel;
 architecture toplevel of testpat_toplevel is
 
 component vga_sync is
-    port ( pixel_clk : in std_logic;
+    port ( pixel_en : in std_logic;
            clk : in std_logic;
            pixel_x : out std_logic_vector(9 downto 0);
            pixel_y : out std_logic_vector(9 downto 0);
@@ -37,7 +37,7 @@ component vga_test_pattern is
            color : out std_logic_vector(11 downto 0));
 end component;
 
-signal pixel_clk_sig : std_logic := '0';
+signal pixel_en_sig : std_logic := '0';
 signal counter : unsigned(1 downto 0) := "00";
 
 signal pixel_x_sig : std_logic_vector(9 downto 0) := (others => '0');
@@ -51,13 +51,13 @@ signal color_sig : std_logic_vector(11 downto 0) := (others => '0');
 begin
 
  -- generate pulse
-pixel_clkgen : process(clk_ext)
+pixel_engen : process(clk_ext)
 begin
     if rising_edge(clk_ext) then
         if (counter + 1) = "11" then
-            pixel_clk_sig <= '1';
+            pixel_en_sig <= '1';
         else
-            pixel_clk_sig <= '0';
+            pixel_en_sig <= '0';
         end if;
         
         counter <= counter + 1; -- overflows to 0 when tc
@@ -65,7 +65,7 @@ begin
 end process;
 
 sync: vga_sync
-    port map ( pixel_clk => pixel_clk_sig,
+    port map ( pixel_en => pixel_en_sig,
                clk => clk_ext,
                pixel_x => pixel_x_sig,
                pixel_y => pixel_y_sig,

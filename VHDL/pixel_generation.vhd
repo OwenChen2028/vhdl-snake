@@ -73,7 +73,7 @@ begin
     else
         case selected is
         when to_unsigned(0, 8) =>
-            if grid_x(0) = '0' xor grid_y(0) = '0' then -- alternating colors
+            if grid_x(0) = '1' xor grid_y(0) = '1' then -- alternating colors
                 color <= GRID_COLOR_A; -- grid color 1
             else
                 color <= GRID_COLOR_B; -- grid color 2

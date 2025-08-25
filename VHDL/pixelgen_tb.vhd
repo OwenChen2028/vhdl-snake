@@ -108,34 +108,34 @@ begin
     -- test on grid border
     pixel_x_sig <= std_logic_vector(to_unsigned(256, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(36, 10));
-    wait for 10 ns; -- expect blue at top
+    wait for 10 ns; -- expect dark green at top
     
     pixel_x_sig <= std_logic_vector(to_unsigned(347, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(423, 10));
-    wait for 10 ns; -- expect blue at bottom
+    wait for 10 ns; -- expect dark green at bottom
     
     pixel_x_sig <= std_logic_vector(to_unsigned(61, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(182, 10));
-    wait for 10 ns; -- expect blue at left
+    wait for 10 ns; -- expect dark green at left
     
     pixel_x_sig <= std_logic_vector(to_unsigned(598, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(309, 10));
-    wait for 10 ns; -- expect blue at right
+    wait for 10 ns; -- expect dark green at right
     
-    -- test black squares in grid
+    -- test squares in grid
     pixel_x_sig <= std_logic_vector(to_unsigned(79, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(66, 10));
-    wait for 10 ns; -- expect black
+    wait for 10 ns; -- expect light green shade 1
     
     pixel_x_sig <= std_logic_vector(to_unsigned(284, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(162, 10));
-    wait for 10 ns; -- expect black
+    wait for 10 ns; -- expect light green shade 2
     
     pixel_x_sig <= std_logic_vector(to_unsigned(472, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(367, 10));
-    wait for 10 ns; -- expect black
+    wait for 10 ns; -- expect light green shade 2
     
-    -- test red squares in grid
+    -- test fruit in grid
     pixel_x_sig <= std_logic_vector(to_unsigned(75, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(386, 10));
     wait for 10 ns; -- expect red
@@ -148,18 +148,18 @@ begin
     pixel_y_sig <= std_logic_vector(to_unsigned(406, 10));
     wait for 10 ns; -- expect red
     
-    -- test green squares in grid
+    -- test snake in grid
     pixel_x_sig <= std_logic_vector(to_unsigned(246, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(185, 10));
-    wait for 10 ns; -- expect green
+    wait for 10 ns; -- expect blue
     
     pixel_x_sig <= std_logic_vector(to_unsigned(412, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(396, 10));
-    wait for 10 ns; -- expect green
+    wait for 10 ns; -- expect blue
     
     pixel_x_sig <= std_logic_vector(to_unsigned(544, 10));
     pixel_y_sig <= std_logic_vector(to_unsigned(159, 10));
-    wait for 10 ns; -- expect green
+    wait for 10 ns; -- expect blue
     
     -- reset
     video_on_sig <= '0';
