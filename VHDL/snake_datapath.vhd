@@ -172,12 +172,14 @@ begin
     end if;
 end process;
 
-check_collision: process(put_head, grid_2d, head_x, head_y)
+check_collision: process(clk)
 begin
-    if put_head = '1' and grid_2d(to_integer(head_x))(to_integer(head_y)) > to_unsigned(0, 8) then
-        self_collision <= '1';
-    else
-        self_collision <= '0';
+    if rising_edge(clk) then
+        if reset = '1' then
+            self_collision  <= '0';
+        elsif put_head = '1' and grid_2d(to_integer(head_x))(to_integer(head_y)) > to_unsigned(0, 8) then
+            self_collision <= '1'; -- head would be placed onto snake body
+        end if;
     end if;
 end process;
 

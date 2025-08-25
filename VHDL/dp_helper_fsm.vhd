@@ -27,7 +27,7 @@ end dp_helper_fsm;
 
 architecture behavioral of dp_helper_fsm is
 
-type state is (idle, move_head, buffer1, buffer2, remove_tail, place_head, buffer3, place_fruit);
+type state is (idle, move_head, buffer1, remove_tail, place_head, buffer3, place_fruit);
 signal current_state, next_state : state := idle; -- start state
 
 signal mv_head_sig : std_logic := '0';
@@ -58,8 +58,6 @@ begin
             when move_head =>
                 next_state <= buffer1; -- wait for head pos to update in datapath
             when buffer1 =>
-                next_state <= buffer2; -- wait for full to update in datapath
-            when buffer2 =>
                 if grow = '1' then
                     next_state <= place_head; -- skip remove tail state
                 else -- grow is 0
