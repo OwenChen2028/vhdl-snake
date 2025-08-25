@@ -53,7 +53,6 @@ end component;
 
 component snake_datapath is
     port ( clk : in std_logic;
-           update : in std_logic;
            dir : in std_logic_vector(1 downto 0);
 		   rand : in std_logic_vector(7 downto 0);
 		   mv_head : in std_logic;
@@ -65,16 +64,17 @@ component snake_datapath is
 		   grow : out std_logic;
 		   full : out std_logic;
 		   crash : out std_logic;
-		   finished : out std_logic );
+		   eaten : out std_logic );
 end component;
 
 component dp_helper_fsm is
     port ( clk : in std_logic;
+           update : in std_logic;
            move : in std_logic;
 		   full : in std_logic;
 		   crash : in std_logic;
            grow : in std_logic;
-           finished : in std_logic;
+           eaten : in std_logic;
 		   reset : in std_logic;
            mv_head : out std_logic;
 		   rm_tail : out std_logic;
@@ -152,7 +152,7 @@ signal put_fruit_sig : std_logic := '0';
 signal grow_sig : std_logic := '0';
 signal full_sig : std_logic := '0';
 signal crash_sig : std_logic := '0';
-signal finished_sig : std_logic := '0';
+signal eaten_sig : std_logic := '0';
 
 signal rand_sig : std_logic_vector(7 downto 0) := (others => '0');
 
@@ -206,7 +206,6 @@ pixelgen: pixel_generation
 
 datapath: snake_datapath
     port map ( clk => clk_ext,
-               update => update_sig,
                dir => direction_sig,
                rand => rand_sig,
                mv_head => mv_head_sig,
@@ -218,15 +217,16 @@ datapath: snake_datapath
                grow => grow_sig,
                full => full_sig,
                crash => crash_sig,
-               finished => finished_sig );
+               eaten => eaten_sig );
 
 helperfsm: dp_helper_fsm
     port map ( clk => clk_ext,
+               update => update_sig,
                move => move_sig,
                full => full_sig,
                crash => crash_sig,
                grow => grow_sig,
-               finished => finished_sig,
+               eaten => eaten_sig,
                reset => reset_sync_sig,
                mv_head => mv_head_sig,
                rm_tail => rm_tail_sig,

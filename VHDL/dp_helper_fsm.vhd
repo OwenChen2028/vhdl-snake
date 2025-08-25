@@ -12,11 +12,12 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity dp_helper_fsm is
     port ( clk : in std_logic;
+           update : in std_logic;
            move : in std_logic;
 		   full : in std_logic;
 		   crash : in std_logic;
            grow : in std_logic;
-           finished : in std_logic;
+           eaten : in std_logic;
 		   reset : in std_logic;
            mv_head : out std_logic;
 		   rm_tail : out std_logic;
@@ -43,9 +44,9 @@ begin
     end if;
 end process;
 
-next_state_logic: process(current_state, move, full, crash, grow, finished, reset)
+next_state_logic: process(current_state, update, move, full, crash, grow, eaten, reset)
 begin
-    if reset = '1' or full = '1' or crash = '1' or finished = '1' then
+    if update = '1' or reset = '1' or full = '1' or crash = '1' then
         next_state <= idle; -- go to start state
     else
         next_state <= current_state; -- derfault to current
@@ -69,7 +70,9 @@ begin
             when place_head =>
                 next_state <= buffer3; -- wait for head to be placed in datapath
             when buffer3 =>
-                next_state <= place_fruit;
+                if eaten = '1' then
+                    next_state <= place_fruit;
+                end if;
             when place_fruit =>
                 next_state <= buffer3; -- wait for finished to update before retrying, loop until finished or reset
             when others =>

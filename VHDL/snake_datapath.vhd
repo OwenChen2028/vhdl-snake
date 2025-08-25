@@ -12,7 +12,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity snake_datapath is
     port ( clk : in std_logic;
-           update : in std_logic;
            dir : in std_logic_vector(1 downto 0);
 		   rand : in std_logic_vector(7 downto 0);
 		   mv_head : in std_logic;
@@ -24,7 +23,7 @@ entity snake_datapath is
 		   grow : out std_logic;
 		   full : out std_logic;
 		   crash : out std_logic;
-		   finished : out std_logic );
+		   eaten : out std_logic );
 end snake_datapath;
 
 architecture behavioral of snake_datapath is
@@ -65,7 +64,7 @@ signal self_collision : std_logic := '0';
 signal grow_sig : std_logic := '0';
 signal full_sig : std_logic := '0';
 
-signal finished_sig : std_logic := '0';
+signal eaten_sig : std_logic := '0';
 
 signal rand_x, rand_y : unsigned(3 downto 0);
 
@@ -137,27 +136,15 @@ begin
     if rising_edge(clk) then
         if reset = '1' then
             fruit_pos <= init_fruit;
+            eaten_sig <= '0';
         elsif grow_sig = '1' then
             fruit_pos <= to_unsigned(255, 8); -- move fruit out of grid
+            eaten_sig <= '1';
         elsif put_fruit = '1' then -- place fruit
             if rand_y < to_unsigned(11, 4) then -- y in bounds, always true for x
                 if grid_2d(to_integer(rand_x))(to_integer(rand_y)) = to_unsigned(0, 8) then -- empty square
                     fruit_pos <= unsigned(rand); -- update fruit pos
-                end if;
-            end if;
-        end if;
-    end if;
-end process;
-
-check_finished : process(clk)
-begin
-    if rising_edge(clk) then
-        if reset = '1' or update = '1' then
-            finished_sig <= '0';
-        elsif put_fruit = '1' then
-            if rand_y < to_unsigned(11, 4) then -- y in bounds, always true for x
-                if grid_2d(to_integer(rand_x))(to_integer(rand_y)) = to_unsigned(0, 8) then -- empty square
-                    finished_sig <= '1';
+                    eaten_sig <= '0';
                 end if;
             end if;
         end if;
@@ -229,6 +216,6 @@ full <= full_sig;
 
 crash <= out_bounds or self_collision;
 
-finished <= finished_sig;
+eaten <= eaten_sig;
 
 end behavioral;
