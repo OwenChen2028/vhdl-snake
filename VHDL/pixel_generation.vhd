@@ -43,6 +43,9 @@ begin
 end process;
 
 select_val : process(grid_x, grid_y, grid)
+
+variable index : integer; -- CITATION: referenced https://nandland.com/variable/
+
 begin
     if (grid_x <= to_unsigned(0,10)) or (grid_x >= to_unsigned(19,10)) or
        (grid_y <= to_unsigned(0,10)) or (grid_y >= to_unsigned(14,10)) then
@@ -50,9 +53,14 @@ begin
     elsif (grid_x <= to_unsigned(1,10)) or (grid_x >= to_unsigned(18,10)) or
           (grid_y <= to_unsigned(1,10)) or (grid_y >= to_unsigned(13,10)) then
         selected <= to_unsigned(178, 8); -- on border surrounding grid
-    else -- convert grid x and y to 1d positon, using shifting as multiplication
-        selected <= unsigned( grid ( to_integer(shift_left(resize(shift_left(grid_y - 2, 4), 11) + resize((grid_x - 2), 11), 3)) + 7
-                              downto to_integer(shift_left(resize(shift_left(grid_y - 2, 4), 11) + resize((grid_x - 2), 11), 3)) ));
+    else -- convert grid x and y to 1d positon, using shift as multiplication
+		index := to_integer(
+					shift_left(
+						resize( shift_left(grid_y - 2, 4), 11 )   -- (grid_y - 2) * 16
+						+ resize( (grid_x - 2), 11 ),             -- + (grid_x - 2)
+					3)                                            -- * 8
+				);
+		selected <= unsigned(grid(index + 7 downto index));
     end if;
 end process;
 

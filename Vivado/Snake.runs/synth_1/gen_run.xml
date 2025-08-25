@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1755993387" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_sync.dcp">
-  <File Type="PA-TCL" Name="game_fsm_toplevel.tcl"/>
-  <File Type="REPORTS-TCL" Name="game_fsm_toplevel_reports.tcl"/>
-  <File Type="RDS-RDS" Name="game_fsm_toplevel.vds"/>
-  <File Type="RDS-UTIL" Name="game_fsm_toplevel_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="game_fsm_toplevel_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="game_fsm_toplevel.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1756086465" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_sync.dcp">
+  <File Type="PA-TCL" Name="snake_toplevel.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="snake_toplevel_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="snake_toplevel_reports.tcl"/>
+  <File Type="RDS-RDS" Name="snake_toplevel.vds"/>
+  <File Type="RDS-UTIL" Name="snake_toplevel_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="snake_toplevel_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="snake_toplevel.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="snake_toplevel_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="snake_toplevel_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../VHDL/testpat_toplevel.vhd">
@@ -38,12 +41,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../VHDL/vga_test_pattern_12bit.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../VHDL/direction_fsm.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -56,31 +53,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../VHDL/test.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../VHDL/game_fsm.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../VHDL/lfsr_randomizer.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../VHDL/randomizer_toplevel.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../VHDL/lab5_clock_generation.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -92,9 +65,51 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../VHDL/game_state_fsm.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/randomizer_lfsr.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/clock_generation.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/vga_test_pattern.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/dp_helper_fsm.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/snake_datapath.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/snake_toplevel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="game_fsm_toplevel"/>
+      <Option Name="TopModule" Val="snake_toplevel"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -121,6 +136,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../VHDL/fsm2_constraints.xdc">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/snake_constraints.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

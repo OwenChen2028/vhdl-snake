@@ -109,13 +109,13 @@ left_btn: button_interface
                button_db_port => left_db_sig,
                button_mp_port => open );
                
-pause_btn: button_interface
+pause_sw: button_interface
     port map ( clk_port => clk_ext,
                button_port => pause_switch,
                button_db_port => pause_db_sig,
                button_mp_port => open );
                
-reset_btn: button_interface
+reset_sw: button_interface
     port map ( clk_port => clk_ext,
                button_port => reset_switch,
                button_db_port => reset_db_sig,

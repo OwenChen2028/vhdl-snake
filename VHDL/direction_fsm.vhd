@@ -38,11 +38,11 @@ begin
     end if;
 end process;
 
-next_state_logic: process(current_state, input)
+next_state_logic: process(current_state, input, pause, reset)
 begin
     if reset = '1' then
         next_state <= right; -- go to start state
-    elsif pause = '0' then -- transition when not paused
+    elsif pause = '1' then -- transition when not paused
         next_state <= current_state;
     else
         next_state <= current_state;

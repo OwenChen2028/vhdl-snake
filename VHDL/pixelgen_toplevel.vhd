@@ -21,6 +21,8 @@ end pixelgen_toplevel;
 
 architecture toplevel of pixelgen_toplevel is
 
+-- VGA Controller components
+
 component vga_sync is
     port ( pixel_clk : in std_logic;
            clk : in std_logic;

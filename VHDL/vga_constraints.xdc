@@ -1,8 +1,9 @@
-# CITATION: Referenced https://digilent.com/reference/programmable-logic/basys-3/reference-manual
+# CITATION: referenced https://digilent.com/reference/programmable-logic/basys-3/reference-manual
 
 ##====================================================================
 ## Clock
 ##====================================================================
+
 set_property PACKAGE_PIN W5 [get_ports clk_ext]
 set_property IOSTANDARD LVCMOS33 [get_ports clk_ext]
 create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk_ext]
