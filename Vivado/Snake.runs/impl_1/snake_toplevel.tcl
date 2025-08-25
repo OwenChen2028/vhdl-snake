@@ -126,6 +126,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 1
+  set_param synth.incrementalSynthesisCache C:/Users/f007mx1/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-5612-c011-06/incrSyn
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1

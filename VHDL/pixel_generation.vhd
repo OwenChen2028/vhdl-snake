@@ -27,10 +27,12 @@ signal grid_y : unsigned(9 downto 0) := (others => '0');
 
 signal selected : unsigned(7 downto 0) := (others => '0');
 
-constant RED_CONST : std_logic_vector(11 downto 0) := "111100000000";
-constant GREEN_CONST : std_logic_vector(11 downto 0) := "000011110000";
-constant BLUE_CONST : std_logic_vector(11 downto 0) := "000000001111";
-constant BLACK_CONST : std_logic_vector(11 downto 0) := "000000000000";
+constant BLACK_COLOR : std_logic_vector(11 downto 0) := (others => '0'); 
+constant SNAKE_COLOR : std_logic_vector(11 downto 0) := "010001111110";
+constant GRID_COLOR_A : std_logic_vector(11 downto 0) := "101111010101";
+constant GRID_COLOR_B : std_logic_vector(11 downto 0) := "101011010101";
+constant BORDER_COLOR : std_logic_vector(11 downto 0) := "010110000011";
+constant FRUIT_COLOR : std_logic_vector(11 downto 0) := "110101010010";
 
 signal color : std_logic_vector(11 downto 0) := (others => '0');
 
@@ -49,7 +51,7 @@ variable index : integer; -- CITATION: referenced https://nandland.com/variable/
 begin
     if (grid_x <= to_unsigned(0,10)) or (grid_x >= to_unsigned(19,10)) or
        (grid_y <= to_unsigned(0,10)) or (grid_y >= to_unsigned(14,10)) then
-        selected <= to_unsigned(0, 8); -- outside of grid, on background
+        selected <= to_unsigned(179, 8); -- outside of grid, on background
     elsif (grid_x <= to_unsigned(1,10)) or (grid_x >= to_unsigned(18,10)) or
           (grid_y <= to_unsigned(1,10)) or (grid_y >= to_unsigned(13,10)) then
         selected <= to_unsigned(178, 8); -- on border surrounding grid
@@ -64,20 +66,26 @@ begin
     end if;
 end process;
 
-lookup_col : process(selected, video_on)
+lookup_col : process(selected, video_on, grid_x, grid_y)
 begin
     if video_on = '0' then
-        color <= BLACK_CONST; -- 0 value
+        color <= BLACK_COLOR; -- 0 value
     else
         case selected is
         when to_unsigned(0, 8) =>
-            color <= BLACK_CONST; -- background color
+            if grid_x(0) = '0' xor grid_y(0) = '0' then -- alternating colors
+                color <= GRID_COLOR_A; -- grid color 1
+            else
+                color <= GRID_COLOR_B; -- grid color 2
+            end if;
         when to_unsigned(177, 8) =>
-            color <= RED_CONST; -- fruit color
+            color <= FRUIT_COLOR; -- fruit color
         when to_unsigned(178, 8) =>
-            color <= BLUE_CONST; -- border color
+            color <= BORDER_COLOR; -- border color
+        when to_unsigned(179, 8) =>
+            color <= BLACK_COLOR; -- outside color
         when others =>
-            color <= GREEN_CONST; -- snake color
+            color <= SNAKE_COLOR; -- snake color
         end case;
     end if;
 end process;
