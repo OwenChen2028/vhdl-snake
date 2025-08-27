@@ -38,7 +38,7 @@ signal clk_sig : std_logic := '0';
 
 begin
 
-lfsr: randomizer_lfsr
+uut: randomizer_lfsr
     port map ( clk => clk_sig,
                reset => reset_button,
                rand => rand_out );

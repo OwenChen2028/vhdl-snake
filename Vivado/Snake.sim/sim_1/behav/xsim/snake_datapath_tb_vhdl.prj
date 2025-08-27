@@ -1,0 +1,29 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../VHDL/testpat_toplevel.vhd" \
+"../../../../../VHDL/pixelgen_toplevel.vhd" \
+"../../../../../VHDL/input_conditioning.vhd" \
+"../../../../../VHDL/pixel_generation.vhd" \
+"../../../../../VHDL/vga_sync.vhd" \
+"../../../../../VHDL/direction_fsm.vhd" \
+"../../../../../VHDL/dirfsm_toplevel.vhd" \
+"../../../../../VHDL/randomizer_toplevel.vhd" \
+"../../../../../VHDL/game_fsm_toplevel.vhd" \
+"../../../../../VHDL/game_state_fsm.vhd" \
+"../../../../../VHDL/randomizer_lfsr.vhd" \
+"../../../../../VHDL/clock_generation.vhd" \
+"../../../../../VHDL/vga_test_pattern.vhd" \
+"../../../../../VHDL/dp_helper_fsm.vhd" \
+"../../../../../VHDL/snake_datapath.vhd" \
+"../../../../../VHDL/snake_toplevel.vhd" \
+"../../../../../VHDL/helper_fsm_toplevel.vhd" \
+"../../../../../VHDL/vga_sync_tb.vhd" \
+"../../../../../VHDL/direction_fsm_tb.vhd" \
+"../../../../../VHDL/pixelgen_tb.vhd" \
+"../../../../../VHDL/game_fsm_tb.vhd" \
+"../../../../../VHDL/randomizer_tb.vhd" \
+"../../../../../VHDL/dp_helper_fsm_tb.vhd" \
+"../../../../../VHDL/snake_datapath_tb.vhd" \
+
+# Do not sort compile order
+nosort

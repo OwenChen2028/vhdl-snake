@@ -64,7 +64,7 @@ begin
     end if;
 end process;
 
-sync: vga_sync
+uut: vga_sync
     port map ( pixel_en => pixel_en_sig,
                clk => clk_ext,
                pixel_x => pixel_x_sig,

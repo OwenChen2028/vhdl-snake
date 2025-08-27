@@ -77,7 +77,7 @@ begin
     end if;
 end process;
 
-dirfsm: direction_fsm
+uut: direction_fsm
     port map ( clk => clk_ext,
                update => update_sig,
                input => input_sig,

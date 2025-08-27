@@ -86,7 +86,7 @@ sync: vga_sync
                hsync => hsync_sig,
                vsync => vsync_sig);
 
-pixelgen: pixel_generation
+uut: pixel_generation
     port map ( pixel_x => pixel_x_sig,
                pixel_y => pixel_y_sig,
                video_on => video_on_sig,

@@ -78,7 +78,7 @@ begin
     end if;
 end process;
 
-gamefsm: game_state_fsm
+uut: game_state_fsm
     port map ( clk => clk_ext,
                update => update_sig,
                pressed => pressed_sig,
