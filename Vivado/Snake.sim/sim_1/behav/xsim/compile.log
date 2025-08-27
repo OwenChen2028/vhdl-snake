@@ -1,28 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/testpat_toplevel.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'testpat_toplevel'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixelgen_toplevel.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'pixelgen_toplevel'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'pixel_generation'
-WARNING: [VRFC 10-471] case choice must be a locally static expression [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd:75]
-WARNING: [VRFC 10-471] case choice must be a locally static expression [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd:81]
-WARNING: [VRFC 10-471] case choice must be a locally static expression [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd:83]
-WARNING: [VRFC 10-471] case choice must be a locally static expression [P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixel_generation.vhd:85]
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_sync.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'vga_sync'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/direction_fsm.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'direction_fsm'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'dirfsm_toplevel'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/game_state_fsm.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'game_state_fsm'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dp_helper_fsm.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'dp_helper_fsm'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_datapath.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'snake_datapath'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_toplevel.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'snake_toplevel'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/vga_sync_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'vga_sync_tb'
 INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dp_helper_fsm_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'dp_helper_fsm_tb'

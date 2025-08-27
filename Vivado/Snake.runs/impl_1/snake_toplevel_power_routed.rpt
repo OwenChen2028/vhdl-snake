@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date             : Tue Aug 26 20:35:51 2025
+| Date             : Tue Aug 26 22:06:46 2025
 | Host             : c011-02 running 64-bit major release  (build 9200)
 | Command          : report_power -file snake_toplevel_power_routed.rpt -pb snake_toplevel_power_summary_routed.pb -rpx snake_toplevel_power_routed.rpx
 | Design           : snake_toplevel
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.103        |
+| Total On-Chip Power (W)  | 0.104        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.031        |
+| Dynamic (W)              | 0.032        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.5         |
@@ -54,15 +54,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.006 |        3 |       --- |             --- |
 | Slice Logic    |     0.006 |     7323 |       --- |             --- |
-|   LUT as Logic |     0.006 |     4535 |     20800 |           21.80 |
+|   LUT as Logic |     0.006 |     4572 |     20800 |           21.98 |
 |   F7/F8 Muxes  |    <0.001 |      622 |     32600 |            1.91 |
 |   Register     |    <0.001 |     1601 |     41600 |            3.85 |
 |   CARRY4       |    <0.001 |        9 |      8150 |            0.11 |
 |   Others       |     0.000 |       24 |       --- |             --- |
-| Signals        |     0.010 |     4569 |       --- |             --- |
+| Signals        |     0.011 |     4570 |       --- |             --- |
 | I/O            |     0.009 |       21 |       106 |           19.81 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.103 |          |           |                 |
+| Total          |     0.104 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.032 |       0.023 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.033 |       0.023 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,8 +141,8 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| snake_toplevel |     0.031 |
-|   datapath     |     0.015 |
+| snake_toplevel |     0.032 |
+|   datapath     |     0.016 |
 |   randomizer   |     0.005 |
 +----------------+-----------+
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1756254802" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_sync.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1756260259" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_sync.dcp">
   <File Type="PA-TCL" Name="snake_toplevel.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="snake_toplevel_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="snake_toplevel_reports.tcl"/>

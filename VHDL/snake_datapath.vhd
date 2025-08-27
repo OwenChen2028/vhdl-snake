@@ -32,12 +32,16 @@ type y_vals is array (10 downto 0) of unsigned(7 downto 0);
 type x_vals is array (15 downto 0) of y_vals;
 
 constant init_grid : x_vals := (
-	2 => ( -- x = 2
-        5 => "00000001", -- y = 5
+    2 => ( -- x = 2
+        5 => to_unsigned(1, 8), -- y = 5
         others => (others => '0')
     ),
-    3 => ( -- x = 3
-        5 => "00000010", -- y = 5
+	3 => ( -- x = 3
+        5 => to_unsigned(2, 8), -- y = 5
+        others => (others => '0')
+    ),
+    4 => ( -- x = 4
+        5 => to_unsigned(3, 8), -- y = 5
         others => (others => '0')
     ),
     others => (others => (others => '0'))
@@ -46,17 +50,17 @@ constant init_grid : x_vals := (
 signal grid_2d : x_vals := init_grid;
 signal grid_1d : std_logic_vector(1407 downto 0) := (others => '0');
 
-constant init_head  : unsigned(8 downto 0) := to_unsigned(3, 5) & to_unsigned(5, 4);
+constant init_head  : unsigned(8 downto 0) := to_unsigned(4, 5) & to_unsigned(5, 4);
 signal head_pos : unsigned(8 downto 0) := init_head; -- first 5 bits are x, remaning 4 are y
 
 signal head_x : unsigned(3 downto 0);
 signal head_y : unsigned(3 downto 0);
 
-constant init_length : unsigned(7 downto 0) := to_unsigned(2, 8);
+constant init_length : unsigned(7 downto 0) := to_unsigned(3, 8);
 signal length : unsigned(7 downto 0) := init_length;
 
 constant init_fruit : unsigned(7 downto 0) := to_unsigned(12, 4) & to_unsigned(5, 4);
-signal fruit_pos  : unsigned(7 downto 0) := init_fruit; -- 4 bits each for x and y
+signal fruit_pos : unsigned(7 downto 0) := init_fruit; -- 4 bits each for x and y
 
 signal out_bounds : std_logic := '0';
 signal self_collision : std_logic := '0';
