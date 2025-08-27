@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1756260259" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_sync.dcp">
-  <File Type="PA-TCL" Name="snake_toplevel.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="snake_toplevel_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="snake_toplevel_reports.tcl"/>
-  <File Type="RDS-RDS" Name="snake_toplevel.vds"/>
-  <File Type="RDS-UTIL" Name="snake_toplevel_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="snake_toplevel_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="snake_toplevel.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="snake_toplevel_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="snake_toplevel_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1756263686" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/vga_sync.dcp">
+  <File Type="PA-TCL" Name="helper_fsm_toplevel.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="helper_fsm_toplevel_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="helper_fsm_toplevel_reports.tcl"/>
+  <File Type="RDS-RDS" Name="helper_fsm_toplevel.vds"/>
+  <File Type="RDS-UTIL" Name="helper_fsm_toplevel_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="helper_fsm_toplevel_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="helper_fsm_toplevel.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="helper_fsm_toplevel_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="helper_fsm_toplevel_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../VHDL/testpat_toplevel.vhd">
@@ -107,9 +107,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../VHDL/helper_fsm_toplevel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="snake_toplevel"/>
+      <Option Name="TopModule" Val="helper_fsm_toplevel"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -143,6 +149,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../VHDL/snake_constraints.xdc">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../VHDL/fsm3_constraints.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

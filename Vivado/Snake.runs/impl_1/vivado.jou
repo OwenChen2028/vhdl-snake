@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Aug 26 22:05:33 2025
-# Process ID: 11324
+# Start of session at: Tue Aug 26 23:02:05 2025
+# Process ID: 3616
 # Current directory: P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.runs/impl_1
-# Command line: vivado.exe -log snake_toplevel.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source snake_toplevel.tcl -notrace
-# Log file: P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.runs/impl_1/snake_toplevel.vdi
+# Command line: vivado.exe -log helper_fsm_toplevel.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source helper_fsm_toplevel.tcl -notrace
+# Log file: P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.runs/impl_1/helper_fsm_toplevel.vdi
 # Journal file: P:/25summer/engs031/Groups/GoldenGiraffe/Vivado/Snake.runs/impl_1\vivado.jou
 # Running On: c011-02, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 20, Host memory: 34031 MB
 #-----------------------------------------------------------
-source snake_toplevel.tcl -notrace
+source helper_fsm_toplevel.tcl -notrace
