@@ -32,7 +32,9 @@ begin
 state_update: process(clk)
 begin
     if rising_edge(clk) then   
-        if update = '1' then
+        if reset = '1' then
+            current_state <= right; -- go to start state
+        elsif update = '1' then
             current_state <= next_state;
         end if;
     end if;
@@ -40,9 +42,7 @@ end process;
 
 next_state_logic: process(current_state, input, pause, reset)
 begin
-    if reset = '1' then
-        next_state <= right; -- go to start state
-    elsif pause = '1' then -- transition when not paused
+    if pause = '1' then -- transition when not paused
         next_state <= current_state;
     else
         next_state <= current_state;

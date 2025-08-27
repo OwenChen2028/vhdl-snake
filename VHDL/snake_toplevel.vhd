@@ -245,7 +245,7 @@ dirfsm: direction_fsm
                update => update_sig,
                input => input_sig,
                pause => pause_db_sig,
-               reset => reset_db_sig,
+               reset => reset_sync_sig,
                direction => direction_sig );
 
 up_btn: button_interface
