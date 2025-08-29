@@ -17,6 +17,7 @@ vhdl xil_defaultlib  \
 "../../../../../VHDL/snake_datapath.vhd" \
 "../../../../../VHDL/snake_toplevel.vhd" \
 "../../../../../VHDL/helper_fsm_toplevel.vhd" \
+"../../../../../VHDL/datapath_toplevel.vhd" \
 "../../../../../VHDL/vga_sync_tb.vhd" \
 "../../../../../VHDL/direction_fsm_tb.vhd" \
 "../../../../../VHDL/pixelgen_tb.vhd" \
@@ -24,6 +25,7 @@ vhdl xil_defaultlib  \
 "../../../../../VHDL/randomizer_tb.vhd" \
 "../../../../../VHDL/dp_helper_fsm_tb.vhd" \
 "../../../../../VHDL/snake_datapath_tb.vhd" \
+"../../../../../VHDL/snake_shell_tb.vhd" \
 
 # Do not sort compile order
 nosort

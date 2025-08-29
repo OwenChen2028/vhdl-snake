@@ -1,0 +1,4 @@
+Running: xsim.dir/snake_shell_tb_behav/xsimk.exe -simmode gui -wdb snake_shell_tb_behav.wdb -simrunnum 0 -socket 52419
+Design successfully loaded
+Design Loading Memory Usage: 9020 KB (Peak: 9020 KB)
+Design Loading CPU Usage: 0 ms

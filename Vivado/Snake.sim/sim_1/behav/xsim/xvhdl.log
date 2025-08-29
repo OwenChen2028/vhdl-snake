@@ -1,2 +1,14 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/testpat_toplevel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'testpat_toplevel'
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/pixelgen_toplevel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pixelgen_toplevel'
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/dirfsm_toplevel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dirfsm_toplevel'
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/randomizer_toplevel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'randomizer_toplevel'
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/datapath_toplevel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'datapath_toplevel'
 INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_datapath_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'snake_datapath_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/25summer/engs031/Groups/GoldenGiraffe/VHDL/snake_shell_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'snake_shell_tb'
